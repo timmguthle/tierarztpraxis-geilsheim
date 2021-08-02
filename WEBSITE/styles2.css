@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Montserrat", sans-serif;
+}
+
+hr {
+	color: #8d8741;
+/*	text-align: center!important;*/
+	height: 2px!important;
+
+}
+
+#Tier {
+	font-weight: 700;
+	color: #fff;
+	font-size: 24px;
+}
+
+#Tier2 {
+	margin: 10px 0px;
+}
+
+.menu_bar {
+	background-color: #8d8741;
+}
+
+.navbar {
+	padding-right: 1.5rem;
+	padding-left: 1rem;
+}
+
+.nav-link {
+	font-size: 16px;
+	color: #fff!important;
+	border-bottom: none;
+}
+
+.nav-link:hover {
+	color: #000!important;
+	border-bottom: 1px solid #000;
+}
+
+
+/*@media only screen and (max-width: 800px) {
+	.navbar {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	#Tier_logo {
+		display: none!important;
+	}
+
+
+}
+
+@media only screen and (max-width: 420px) {
+	#Tier {
+		font-size: 5vw;
+	}
+}*/
+
+@media only screen and (max-width: 786px) {
+	.nav-link:hover {
+		border-bottom: none!important;
+	}
+	#praxisslide .carousel-item, #praxisslide2 .carousel-item {
+	height: 15rem!important;
+	}
+	#praxisslide3 .carousel-item {
+	height: 25rem!important;
+	}
+}
+
+.kon_head {
+	padding: 0px 40px;
+	padding-top: 40px;
+}
+
+.kon_daten {
+	padding: 0px 60px;
+	padding-top: 40px;
+}
+
+li .nav-item {
+	list-style-type: none;
+}
+
+footer {
+	background-color: #dc986a!important;
+	width: 100%;
+	margin-top: auto;
+}
+
+
+
+.small_text {
+	font-size: 12px;
+
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#nav-button {
+	background-color: #fff;
+	border: none;
+	margin-left: 20px; 
+}
+
+#nav-button:hover {
+	background-color: #000;
+}
+
+.f-btn {
+	background-color: #8d8741;
+	border: none;
+}
+
+.f-btn:hover {
+	background-color: #6d6721;
+}
+
+.fa-phone-alt {
+	color: #8d8741
+}
+
+.link_kon {
+	color: #8d8741;
+}
+
+.link_kon:hover {
+	color: #8d8741; 
+}
+
+.link_footer {
+	color: #000;
+}
+
+.link_footer:hover {
+	color: #000;
+}
+
+.footer-list {
+	background-color: #dc986a!important;
+}
+
+#homeslide .carousel-item {
+	height: 30rem;
+	background: #000;
+	color: white;
+	position: relative;
+
+}
+
+#homeslide .container {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding-bottom: 4rem;
+}
+
+#praxisslide .carousel-item, #praxisslide2 .carousel-item {
+	height: 30rem;
+	background: #000;
+	color: white;
+	position: relative;
+}
+
+#praxisslide3 .carousel-item {
+	height: 40rem;
+	background: #000;
+	color: white;
+	position: relative;
+}
+
+
+
+
+.overlay-image {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	background-position: center;
+	background-size: cover;
+	opacity: 0.6;
+}
+
+.pageTitle {
+	height: 20rem;
+	background: #000;
+	color: white;
+	position: relative;
+}
+
+.pageTitleText {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding-bottom: 2rem;
+
+}
