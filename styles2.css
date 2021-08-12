@@ -6,11 +6,37 @@
 	font-family: "Montserrat", sans-serif;
 }
 
+.alert {
+    margin: 0.3rem;
+    padding: 0.6rem 1rem;
+    padding-right: 2.5rem;
+}
+
+.alert-danger {
+    color: #000!important;
+    background-color: #A1292B!important;
+    border-color: #842029!important;
+}
+
+.alert-dismissible .btn-close {
+    padding: 0.85rem 1rem;
+}
+
+.alert-link {
+    color: #000!important;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.alert-link:hover {
+    color: #600!important;
+}
+
+
 hr {
 	color: #8d8741;
 /*	text-align: center!important;*/
 	height: 2px!important;
-
 }
 
 #Tier {
@@ -208,5 +234,4 @@ body {
 	left: 0;
 	bottom: 0;
 	padding-bottom: 2rem;
-
 }
