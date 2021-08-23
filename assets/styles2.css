@@ -161,6 +161,13 @@ body {
 	color: #8d8741;
 }
 
+a {
+    color: #8d8741;
+}
+a:hover {
+    color: #8d8741;
+}
+
 .link_kon:hover {
 	color: #8d8741; 
 }
