@@ -22,13 +22,13 @@
     padding: 0.85rem 1rem;
 }
 
-.alert-link {
+#liveAlertLink {
     color: #000!important;
     text-decoration: none;
     font-weight: normal;
 }
 
-.alert-link:hover {
+#liveAlertLink:hover {
     color: #600!important;
 }
 
