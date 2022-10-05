@@ -47,8 +47,18 @@
             <ul class="navbar-nav ms-auto text-center" >
               <li class="nav-item"><a href="praxis.html" class="nav-link">Praxis</a></li>
               <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
-              <li class="nav-item"><a href="leistungen.html" class="nav-link">Leistungen</a></li>
+              <li class="nav-item dropdown">
+				  <a href="#" class="nav-link dropdown-toggle" role="button"
+					 data-bs-toggle="dropdown">Leistungen</a>
+				  <ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="leistungen.html#ktiere">Kleintiere</a></li>
+					<li><a class="dropdown-item" href="leistungen.html#gtiere">Großtiere</a></li>
+				  </ul>
+			  </li>
               <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+			  <li class="nav-item" ><a href="#" class="nav-link" id="notfall-btn">
+				  <nobr>Notfall  <i class="fa fa-comment-medical"></i></nobr>
+			  </a></li>
               <li><button type="button" class="btn btn-primary me-3" id="nav-button">
                 <a href="tel:09832 214">
                   <i class="fas fa-phone-alt"></i>
@@ -113,7 +123,7 @@
     </button>
 	</div>
 
-hallo
+
 	<!-- Warnhinweis Hygiene -->
 	<div class="container p-5 mb-5">
 	<div class="row">
