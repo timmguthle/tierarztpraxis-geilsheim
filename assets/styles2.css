@@ -299,3 +299,23 @@ a:hover {
     font-size: 22px;
     padding-bottom:5px;
 }
+
+#notfall-collapse {
+    background-color: #efefef;
+}
+
+.card {
+    width:80%;
+    background-color: #fff!important
+}
+
+.card-title i {
+    display: inline-block;
+    float: right;
+    font-size:40px!important;
+    color:#A1292B;
+}
+
+.card-footer {
+    background-color: #fff!important
+}

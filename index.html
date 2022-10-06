@@ -56,7 +56,8 @@
 				  </ul>
 			  </li>
               <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
-			  <li class="nav-item" ><a href="#" class="nav-link" id="notfall-btn">
+			  <li class="nav-item" ><a href="#notfall-collapse" data-bs-toggle="collapse" class="nav-link"
+									   id="notfall-btn" aria-expanded="false">
 				  <nobr>Notfall  <i class="fa fa-comment-medical"></i></nobr>
 			  </a></li>
               <li><button type="button" class="btn btn-primary me-3" id="nav-button">
@@ -70,8 +71,31 @@
       </nav>
     </div>
 
+	<div class="collapse" id="notfall-collapse">
+		<div class="card my-3 mx-auto">
+			<div class="card-body">
+				<h3 class="card-title">Notfall<i class="fas fa-hand-holding-medical"></i></h3>
+				<h6 class="card-subtitle text-muted mb-3"><b>Was tun wenn Ihr Tier plötzlich erkrankt</b></h6>
+				<p class="card-text">
+					Gerne sind wir auch außerhalb unserer Sprechzeiten fast immer für Sie und Ihre Tiere bereit. Dabei
+					haldelt es sich um Zeiten
+					<ul style="list-style-type: none;" class="text-center">
+						<li><b>zwischen 18 Uhr abends und 8 Uhr morgens</b> oder</li>
+						<li><b>Samstag, Sonn- und Feiertags</b></li>
+					</ul>
+					Die verpflichtende Gebürenordnung für Tierärzte schreibt
+					in diesem Fall eine Notfallgebür von 50€ sowie mindestend den 2-fachen Satz vor. Sie erreichen uns unter:<br>
+				</p>
+				<div class="card-footer text-center pt-4 pb-0">
+					<h3><i class="fas fa-phone"></i> <a href="tel:09832 214" style="color:#000">09832 214</a></h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
     <!-- Slideshow -->
-    <div id="homeslide" class="carousel slide" data-bs-ride="carousel">
+    <div id="homeslide" class="carousel slide shadow-lg" data-bs-ride="carousel">
 	<div class="carousel-indicators">
 		<button type="button" data-bs-target="#homeslide" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
 		<button type="button" data-bs-target="#homeslide" data-bs-slide-to="1" aria-label="Slide 2"></button>
