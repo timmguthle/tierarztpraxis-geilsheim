@@ -39,18 +39,51 @@
             <ul class="navbar-nav ms-auto text-center" >
               <li class="nav-item"><a href="praxis.html" class="nav-link">Praxis</a></li>
               <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
-              <li class="nav-item"><a href="leistungen.html" class="nav-link">Leistungen</a></li>
+              <li class="nav-item dropdown">
+				  <a href="#" class="nav-link dropdown-toggle" role="button"
+					 data-bs-toggle="dropdown">Leistungen</a>
+				  <ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="leistungen.html#ktiere">Kleintiere</a></li>
+					<li><a class="dropdown-item" href="leistungen.html#gtiere">Großtiere</a></li>
+				  </ul>
+			  </li>
               <li class="nav-item"><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+			  <li class="nav-item" ><a href="#notfall-collapse" data-bs-toggle="collapse" class="nav-link"
+									   id="notfall-btn" aria-expanded="false">
+				  <nobr>Notfall  <i class="fa fa-comment-medical"></i></nobr>
+			  </a></li>
               <li><button type="button" class="btn btn-primary me-3" id="nav-button">
                 <a href="tel:09832 214">
                   <i class="fas fa-phone-alt"></i>
                 </a>
-              </button></li>
+		      </button></li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
+
+	<div class="collapse" id="notfall-collapse">
+		<div class="card my-3 mx-auto">
+			<div class="card-body">
+				<h3 class="card-title">Notfall<i class="fas fa-hand-holding-medical"></i></h3>
+				<h6 class="card-subtitle text-muted mb-3"><b>Was tun wenn Ihr Tier plötzlich erkrankt</b></h6>
+				<p class="card-text">
+					Gerne sind wir auch außerhalb unserer Sprechzeiten fast immer für Sie und Ihre Tiere bereit. Dabei
+					handelt es sich um Zeiten</p>
+					<ul style="list-style-type: none;" class="text-center">
+						<li><b>zwischen 18 Uhr abends und 8 Uhr morgens</b> oder</li>
+						<li><b>Samstags, Sonn- und Feiertags</b></li>
+					</ul>
+					<p class="card-text">Die verpflichtende Gebührenordnung für Tierärzte schreibt
+					in diesem Fall eine Notfallgebür von 50€ (+ Mwst.) sowie mindestens den 2-fachen Satz vor. Sie erreichen uns unter:<br>
+					</p>
+				<div class="card-footer text-center pt-4 pb-0">
+					<h3><i class="fas fa-phone"></i> <a href="tel:09832 214" style="color:#000">09832 214</a></h3>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
     <!-- Inhalt Kontakt -->
