@@ -6,6 +6,38 @@
 	font-family: "Montserrat", sans-serif;
 }
 
+#map-s-div {
+	overflow: hidden;
+	height: 440px;
+	display: none;
+}
+
+#map-s-text {
+	background-color: rgb(179, 179, 179);
+	height: 440px;
+}
+
+#map-s {
+	position: relative;
+	top: -60px;
+}
+
+#p-map-s {
+	position: relative;
+	font-size: small;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#btn-map-s {
+	display: block;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+
 .alert {
     margin: 0.3rem;
     padding: 0.6rem 1rem;

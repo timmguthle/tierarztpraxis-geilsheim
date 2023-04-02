@@ -19,16 +19,49 @@
 <body class="d-flex flex-column h-100">
 
 
-	<!-- Hygiene Alert -->
-	<div style="background-color: #7d7731;">
-		<div class="alert alert-custom alert-dismissible fade show text-center" role="alert" id="liveAlert">
-			<strong>Wichtig:</strong> <u> <a href="hygiene.html" class="alert-link" id="liveAlertLink">
-			Hygienemaßnahmen in unserer Praxis</a> </u>
-			<br> Die <strong>FFP-2 Maskenpflicht </strong> entfällt ab dem 1. Februar!
-		  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	<!-- Umleitung Modal -->
+
+	<div class="modal fade" tabindex="-1" id="UmModal">
+		<div class="modal-dialog modal-dialog-centered modal-xl">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4>Straßensperrung Geilsheim - Praxis bleibt erreichbar</h4>
+					<button type="button" class="btn-close" onclick="toggleModal()"></button>
+				</div>
+				<div class="row">
+					<div class="col-md-6 px-5 pt-3">
+						<h5>Achtung!</h5>
+						<p>
+							Ab dem 3. April ist die Ortsdurchfahrt Geilsheim voraussichtilich bis zum 9. September gesperrt. <br><br>
+							Von Richtung Wassertrüdingen ist die Durchfahrt zur Tierarztpraxis trotz der Sperrung möglich. <br><br>
+							Auch von Ostheim bzw. Obermögersheim kann zeitweise eine Durchfahrt möglich sein. Um sicher zu gehen, 
+							können sie von Obermögersheim über Altentrüdingen und Wassertrüdingen, bzw. von Ostheim über Westheim und Auhausen fahren. <br><br>
+							Wir bedauern die Unannehmlichkeiten und stehen Ihnen bei Fragen gerne zur Verfügung.
+						</p>
+					</div>
+					<div class="col-md-6">
+						<div id="map-s-div">
+						<iframe id="map-s" width="100%" height="500" src=""></iframe>
+						</div>
+
+						<div id="map-s-text" class="text-center">
+							<p id="p-map-s">
+								Durch das aktivieren der Karte werden Daten an Google Maps übermittelt. <br>Weitere Informationen
+								können Sie unserer <a href="datenschutz.html">Datenschutzerlärung</a> entnehmen.
+							</p>
+							<button class="btn btn-primary f-btn" id="btn-map-s" onclick="showMap()">Karte anzeigen</button>
+						</div>
+					
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary f-btn" onclick="toggleModal()">OK</button>
+				</div>
+			</div>
 		</div>
 	</div>
-
+	
     <!-- Navigation -->
     <div class="menu_bar">
       <nav class="navbar navbar-expand-md navbar-light shadow-lg">
@@ -149,20 +182,10 @@
     </button>
 	</div>
 
-
-	<!-- Warnhinweis Hygiene -->
-	<div class="container p-5 mb-5">
-	<div class="row">
-		<div class="alert alert-warning text-center" role="alert">
-			In unseren Praxisräumen entfällt die <strong>FFP-2 Maskenpflicht</strong>. <br>
-			<a href="hygiene.html" class="alert-link">Hier erfahren sie mehr</a>
-
-		</div>
-	</div>
-
+	
 	<!-- Hinweis neue GOT November -->
-
-
+	<div class="container p-5 mb-5">
+	
 	<div class="row">
 	<div class="alert alert-danger" role="alert">
         <h4 class="alert-heading">Neu Gebührenordung für Tierärzte</h4>
@@ -175,6 +198,7 @@
         </ul>
         <hr style="color:#79282c">
         <p>Schon mal Gedanken über eine <a href="versicherung.html" class="alert-link">Tierkrankenversicherung</a> gemacht? </p>
+		<button onclick="toggleModal()">test</button>
 	</div>
 
 	</div>
@@ -301,7 +325,9 @@
   </div>
 </footer>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>
 
 </body>
 </html>
