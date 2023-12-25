@@ -16,10 +16,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 	<script> 
-		$(function(){
-			$("#test_div").load("footer.html",function(){
-        		alert("loaded");});
-    	});
+		$(document).ready(function(){
+			$("#my_footer").load("assets/footer.html",function(){
+				alert("loaded");});
+		});
 	</script> 
 
 
@@ -216,8 +216,7 @@
 	</div>
 </section>
 
-
-<div id="test_div"><p></p></div>
+<footer id="my_footer"></footer>
 
 
 
