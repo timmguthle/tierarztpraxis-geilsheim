@@ -12,6 +12,13 @@
     padding-right: 2.5rem;
 }
 
+.alert-info {
+	color: #ffffff!important;
+	background-color: #8d8741!important;
+	border-color: #8d8741!important;
+}
+
+
 .alert-custom {
     color: #000!important;
     background-color: #A1292B!important;
