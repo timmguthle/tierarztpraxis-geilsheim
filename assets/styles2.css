@@ -311,18 +311,18 @@ a:hover {
     background-color: #efefef;
 }
 
-.card {
+#notfallcard .card {
     width:80%;
     background-color: #fff!important
 }
 
-.card-title i {
+#notfallcard .card-title i {
     display: inline-block;
     float: right;
     font-size:40px!important;
     color:#A1292B;
 }
 
-.card-footer {
+#notfallcard .card-footer {
     background-color: #fff!important
 }
