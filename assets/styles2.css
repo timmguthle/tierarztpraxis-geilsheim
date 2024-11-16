@@ -311,7 +311,7 @@ a:hover {
     background-color: #efefef;
 }
 
-#notfallcard .card {
+#notfallcard.card {
     width:80%;
     background-color: #fff!important
 }
