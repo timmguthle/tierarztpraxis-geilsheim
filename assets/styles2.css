@@ -366,11 +366,14 @@ a:hover {
 }
 
 /* Image fit (I think its no longer needed because I disabled the fullscreen modal */
-.vet-modal .img-fluid {
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: cover;
+
+
+.modal-vet-image {
+    max-height: 95vh; /* Ensure the image does not exceed the viewport height */
+    width: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image scales properly */
 }
+
 
 .btn-primary {
 	background-color: #8d8741;

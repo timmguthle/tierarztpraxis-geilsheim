@@ -14,6 +14,8 @@ if (vetModal) {
 
     const modalImage = vetModal.querySelector('.modal-vet-image')
     modalImage.src = vetImage
+
+
     
   })
 
