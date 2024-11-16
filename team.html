@@ -27,7 +27,7 @@
 
 	<title>Team - Tierarztpraxis Geilsheim</title>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" style="background-color: #efefef;">
 
     <!-- Navigation -->
     <div id="my_navbar"></div>
@@ -36,7 +36,7 @@
 	<div class="collapse" id="notfall-collapse"></div>
 
     <!-- Inhalt Team -->
-    <div class="container">
+    <div class="container" style="background-color: #efefef;">
         <!--<div class="pageTitle mt-5">
 			<div class="overlay-image" style="background-image: url('images/team_k.jpg'), url('images/team_k(2).jpg');">
 			</div>
@@ -44,10 +44,33 @@
 				<h1 class="fw-bolder">Unser Team</h1>
 			</div>
 		</div>-->
-
-        <div class="row py-5">
+        <div class="container-fluid py-5" style="background-color: #efefef;">
+            <h1 >Unser Praxisteam</h1>
+            <p>
+                Lernen Sie unser Team kennen!
+            </p>
+            <div>
+                <!-- <div class="col">
+                    <a class="btn btn-primary" type="button" href="#tierarztHeading">Tierärzte</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" type="button" href="#tfaHeading">Tiermedizinische Fachangestellte</a>
+                </div>
+                <div class="col">
+                    <a class="btn btn-primary" type="button" href="#azubiHeading">Auszubildende</a>
+                </div> -->
+                <a class="btn btn-primary mb-2" type="button" href="#tierarztHeading">Tierärzte</a>
+                <a class="btn btn-primary mb-2" type="button" href="#tfaHeading">Tiermedizinische Fachangestellte</a>
+                <a class="btn btn-primary mb-2" type="button" href="#verwaltungHeading">Verwaltung</a>
+                <a class="btn btn-primary mb-2" type="button" href="#azubiHeading">Auszubildende</a>
+            </div>
+            
+        </div>
+        <hr>
+        <div id="tierarztHeading" class="row py-4">
+            
             <div class="col text-center">
-                <h1>Tierärzte</h1>
+                <h1 >Tierärzte</h1>
             </div>
         </div>
         <!-- Modal -->
@@ -72,156 +95,136 @@
         <!-- Vet cards -->
         <!-- Cards for:
         - Uli
-        - Nic
+        - Nic (no picture)
         - Ingrid
         - Silke
         - Basti 
         - Tina
-        - Nina
+        - Nina (no picture)
         - Melanie -->
 
         <div class="row gy-4">
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card text-bg-secondary">
+                <div class="card vet-card">
 
-                    <a href="#kuh-big" data-bs-toggle="modal" data-bs-vet-name="Vet name #1" data-bs-vet-image="images/kuh7.jpg"> <img src="images/kuh7.jpg" class="card-img-top" alt="..." > </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Ulrich Güthle" data-bs-vet-image="images/Uli_1.JPG"> <img src="images/Uli_1.JPG" class="card-img-top" alt="..." > </a>
                   
                     <div class="card-body">
-                      <h5 class="card-title">Vet name #1</h5>
-                      <p class="card-text">Short description including </p>
+                      <h5 class="card-title">Dr. Ulrich Güthle</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Großtiere</h6>
+                      <p class="card-text">Short description  </p>
                       
                     </div>
                 </div>
 
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card text-bg-secondary">
+                <div class="card vet-card">
 
-                    <a href="#kuh-big" data-bs-toggle="modal" data-bs-vet-name="Vet name #1" data-bs-vet-image="images/ultra_annie.jpg""> <img src="images/ultra_annie.jpg" class="card-img-top" alt="..." > </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Nicolas Vockrodt" data-bs-vet-image="images/Nic_1.jpg""> <img src="images/Nic_1.jpg" class="card-img-top" alt="..." > </a>
                   
                     <div class="card-body">
-                      <h5 class="card-title">Vet name #2</h5>
-                      <p class="card-text">Short description including </p>
+                      <h5 class="card-title">Dr. Nicolas Vockrodt</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Groß & Kleintiere</h6>
+                      <p class="card-text">Short description  </p>
                       
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card text-bg-secondary">
+                <div class="card vet-card">
 
-                    <a href="#kuh-big" data-bs-toggle="modal"data-bs-vet-name="Vet name #1" data-bs-vet-image="images/kuh_offen.jpg"> <img src="images/kuh_offen.jpg" class="card-img-top" alt="..." > </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Silke Stoklasa" data-bs-vet-image="images/Silke_1.JPG"> <img src="images/Silke_1.JPG" class="card-img-top" alt="..." > </a>
                   
                     <div class="card-body">
-                      <h5 class="card-title">Vet name #3</h5>
-                      <p class="card-text">Short description including </p>
+                      <h5 class="card-title">Silke Stoklasa</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Großtiere</h6>
+                      <p class="card-text">Short description  </p>
                       
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card text-bg-secondary">
+                <div class="card vet-card">
 
-                    <a href="#kuh-big" data-bs-toggle="modal"> <img src="images/kuh7.jpg" class="card-img-top" alt="..."> </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Sebastian Schrumpf" data-bs-vet-image="images/Basti_2.JPG"> <img src="images/Basti_2.JPG" class="card-img-top" alt="..."> </a>
                   
                     <div class="card-body">
-                      <h5 class="card-title">Vet name</h5>
-                      <p class="card-text">Short description including </p>
+                      <h5 class="card-title">Sebastian Schrumpf</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Groß & Kleintiere</h6>
+                      <p class="card-text">Short description  </p>
                       
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card text-bg-secondary">
 
-                    <a href="#kuh-big" data-bs-toggle="modal"> <img src="images/kuh7.jpg" class="card-img-top" alt="..."> </a>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card vet-card">
+
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Ingrid Güthle" data-bs-vet-image="images/Ingrid_1.JPG"> <img src="images/Ingrid_1.JPG" class="card-img-top" alt="..."> </a>
                   
                     <div class="card-body">
-                      <h5 class="card-title">Vet name</h5>
-                      <p class="card-text">Short description including </p>
+                      <h5 class="card-title">Dr. Ingrid Güthle</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
+                      <p class="card-text">Short description  </p>
                       
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card text-bg-secondary">
 
-                    <a href="#kuh-big" data-bs-toggle="modal"> <img src="images/kuh7.jpg" class="card-img-top" alt="..."> </a>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card vet-card">
+
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Tina Rebelein" data-bs-vet-image="images/Tina_4.JPG"> <img src="images/Tina_4.JPG" class="card-img-top" alt="..."> </a>
                   
                     <div class="card-body">
-                      <h5 class="card-title">Vet name</h5>
-                      <p class="card-text">Short description including </p>
+                      <h5 class="card-title">Dr. Tina Rebelein</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
+                      <p class="card-text">Short description  </p>
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card vet-card">
+
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Melanie Lastinger" data-bs-vet-image="images/Melanie_1.JPG"> <img src="images/Melanie_1.JPG" class="card-img-top" alt="..."> </a>
+                  
+                    <div class="card-body">
+                      <h5 class="card-title">Melanie Lastinger</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
+                      <p class="card-text">Short description  </p>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card vet-card">
+
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Nina ..." data-bs-vet-image="..."> <img src="..." class="card-img-top" alt="..." style="max-height: 15rem;"> </a>
+                  
+                    <div class="card-body">
+                      <h5 class="card-title">Nina ...</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Großtiere</h6>
+                      <p class="card-text">Short description  </p>
                       
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- <div class="row">
-            <div class="col-12">
-                <img src="images/team_k.jpg" class="img-fluid">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center">
-                <p style="font-size: 10px;"> Von links: <b>Annika Hertlein</b>, Auszubildende; <b>Dr. Nicolas Ertl</b>, Tierarzt; <b>Elisabeth
-                    Tittel</b>, Tiermedizinische Fachangestellte; <b>Dr. Ingrid Güthle</b>, Tierärztin; <b>Julia Behlert</b>, Tiermedizinische Fachangestellte;
-                    <b>Elena Günther</b>, Tierärztin (derzeit in Erziehungszeit); <b>Kerstin Schmidt</b>, Tiermedizinische
-                    Fachangestellte; <b>Steffi Brunn</b>, Tierärztin; <b>Melanie Lastinger</b>, Tierärztin</p>
-            </div>
-        </div>-->
-        <!--
-        <div class="row pt-3" style="font-size: 10px;">
-            <div class="col text-center">
-                <p>Von Links:</p>
-            </div>
-        </div>
-
-        <div class="row pb-3" style="font-size: 10px;">
-            <div class="col-xl-1 text-center">
-                <p></p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Annika Hertlein</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Dr. Nicolas Vockrodt</b>, Tierarzt</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Elisabeth Tittel</b>, Tiermedizinische Fachangestellte (derzeit in Elternzeit)</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Dr. Ingrid Güthle</b>, Tierärztin</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Julia David</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Elena Günther</b>, Tierärztin (derzeit in Erziehungszeit)</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Kerstin Schmidt</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Steffi Brunn</b>, Tierärztin</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Dr. Tina Rebelein</b>, Tierärztin</p>
-            </div>
-            <div class="col-xl-1 text-center">
-                <p><b>Melanie Lastinger</b>, Tierärztin</p>
-            </div>
-
-        </div> -->
+       <hr>
         
-        <div class="row py-4">
+        <div class="row py-5" id="tfaHeading">
             <div class="col text-center">
                 <h1>Tiermedizinische Fachangestellte</h1>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 px-4">
                 <img src="images/draussen_tfa.png" class="img-fluid">
             </div>
         </div>
@@ -258,8 +261,31 @@
             </div>
         </div>
 
+        <hr>
 
-        <div class="row py-4">
+        <div class="row py-5" id="verwaltungHeading">
+            <div class="col text-center">
+                <h1>Verwaltung</h1>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card vet-card">
+
+                <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Gabi Müller" data-bs-vet-image="images/Gabi_3.JPG"> <img src="images/Gabi_3.JPG" class="card-img-top" alt="..."> </a>
+              
+                <div class="card-body">
+                  <h5 class="card-title">Gabi Müller</h5>
+                  <p class="card-text">Short description </p>
+                  
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <hr>
+
+        <div class="row py-4" id="azubiHeading">
             <div class="col text-center">
                 <h1>Auszubildende</h1>
             </div>

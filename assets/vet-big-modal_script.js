@@ -2,9 +2,9 @@ const vetModal = document.getElementById('vetBig')
 console.log(vetModal)
 
 if (vetModal) {
-    console.log('if statement reached')
-  vetModal.addEventListener('shown.bs.modal', event => {
-    console.log('modal opened')
+
+  eventListener = vetModal.addEventListener('show.bs.modal', event => {
+
     const button = event.relatedTarget
     const vetName = button.getAttribute('data-bs-vet-name')
     const vetImage = button.getAttribute('data-bs-vet-image')
@@ -16,5 +16,6 @@ if (vetModal) {
     modalImage.src = vetImage
     
   })
+
 }
 
