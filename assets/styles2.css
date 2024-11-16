@@ -326,3 +326,47 @@ a:hover {
 #notfallcard .card-footer {
     background-color: #fff!important
 }
+
+.vet-modal button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-top: 4rem;
+	padding-right: 4rem;
+	width: 2rem;
+	height: 2rem;
+	background-size: 2rem;
+}
+
+.vet-modal {
+	background-color:darkgray;
+}
+
+.vet-modal .modal-body {
+	padding: 0;
+}
+
+.vet-modal .container {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+	padding-bottom: 0rem;
+}
+
+.vet-modal .gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%; /* Adjust the height as needed */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    pointer-events: none; /* Ensure the overlay doesn't interfere with clicks */
+}
+
+.vet-modal .img-fluid {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
