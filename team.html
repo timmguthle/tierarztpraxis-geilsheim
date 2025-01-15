@@ -109,20 +109,8 @@
 
         <div class="row gy-4">
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card vet-card">
-
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Ingrid Güthle" data-bs-vet-image="images/Ingrid_1.JPG"> <img src="images/Ingrid_1.JPG" class="card-img-top" alt="..."> </a>
-                  
-                    <div class="card-body">
-                      <h5 class="card-title">Dr. Ingrid Güthle</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
-                      <p class="card-text">Short description  </p>
-                      
-                    </div>
-                </div>
-            </div>
-
+            
+            <!--Uftel-->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
@@ -132,14 +120,103 @@
                   
                     <div class="card-body">
                       <h5 class="card-title">Dr. Ulrich Güthle</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Großtiere</h6>
-                      <p class="card-text">Short description  </p>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Nutztiere & Pferde</h6>
+                      <div class="accordion vet-card-accordion" id="accordionUftel">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUftel" aria-expanded="false" aria-controls="collapseOne">
+                              <strong>Schwerpunkte</strong>
+                            </button>
+                          </h2>
+                          <div id="collapseUftel" class="accordion-collapse collapse" data-bs-parent="#accordionUftel">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Chirurgie</li>
+                                    <li>Bildgebung</li>
+                                    <li>Schokoladenvernichtung</li>
+                                    
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end accordion -->
+                      
                       
                     </div>
                 </div>
-
             </div>
+            <!--Nic-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card vet-card">
 
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Nicolas Vockrodt" data-bs-vet-image="images/Nic_1_2.JPG"> 
+                        <img src="images/Nic_1_2.JPG" class="card-img-top" alt="..."  > 
+                    </a>
+                  
+                    <div class="card-body">
+                      <h5 class="card-title">Dr. Nicolas Vockrodt</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Nutztiere, Pferde & Kleintiere</h6>
+                      <div class="accordion vet-card-accordion" id="accordionNic">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNic" aria-expanded="false" aria-controls="collapseOne">
+                              <strong>Schwerpunkte</strong>
+                            </button>
+                          </h2>
+                          <div id="collapseNic" class="accordion-collapse collapse" data-bs-parent="#accordionNic">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Chirurgie</li>
+                                    <li>Distanzimmobilisation</li>
+                                    <li>IT</li>
+                                    <li>schlechte Witze</li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end accordion -->
+                      
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--Ingrid-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card vet-card">
+
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Ingrid Güthle" data-bs-vet-image="images/Ingrid_1.JPG"> <img src="images/Ingrid_1.JPG" class="card-img-top" alt="..."> </a>
+                  
+                    <div class="card-body">
+                      <h5 class="card-title">Dr. Ingrid Güthle</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
+                      <div class="accordion vet-card-accordion" id="accordionIngrid">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <strong>Schwerpunkte</strong>
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionIngrid">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Chirurgie</li>
+                                    <li>OrthEndokrinologie</li>
+                                    <li>Hühner</li>
+                                    <li>General Management</li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end accordion -->
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!--Melanie-->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
@@ -148,40 +225,30 @@
                     <div class="card-body">
                       <h5 class="card-title">Melanie Lastinger</h5>
                       <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
-                      <p class="card-text">Short description  </p>
+                      <div class="accordion vet-card-accordion" id="accordionMelanie">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMelanie" aria-expanded="false" aria-controls="collapseOne">
+                              <strong>Schwerpunkte</strong>
+                            </button>
+                          </h2>
+                          <div id="collapseMelanie" class="accordion-collapse collapse" data-bs-parent="#accordionMelanie">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Retter aller Dienst und Urlaubspläne</li>
+                                    <li>Eine der treuen Seelen der Praxis</li>
+                                    
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end accordion -->
                       
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card vet-card">
-
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Tina Rebelein" data-bs-vet-image="images/Tina_4.JPG"> <img src="images/Tina_4.JPG" class="card-img-top" alt="..."> </a>
-                  
-                    <div class="card-body">
-                      <h5 class="card-title">Dr. Tina Rebelein</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
-                      <p class="card-text">Short description  </p>
-                      
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card vet-card">
-
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Sebastian Schrumpf" data-bs-vet-image="images/Basti_2.JPG"> <img src="images/Basti_2.JPG" class="card-img-top" alt="..."> </a>
-                  
-                    <div class="card-body">
-                      <h5 class="card-title">Sebastian Schrumpf</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Groß & Kleintiere</h6>
-                      <p class="card-text">Short description  </p>
-                      
-                    </div>
-                </div>
-            </div>
-
+            <!--Silke-->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
@@ -191,29 +258,98 @@
                   
                     <div class="card-body">
                       <h5 class="card-title">Silke Stoklasa</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Großtiere</h6>
-                      <p class="card-text">Short description  </p>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Nutztiere</h6>
+                      <div class="accordion vet-card-accordion" id="accordionSilke">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSilke" aria-expanded="false" aria-controls="collapseOne">
+                              <strong>Schwerpunkte</strong>
+                            </button>
+                          </h2>
+                          <div id="collapseSilke" class="accordion-collapse collapse" data-bs-parent="#accordionSilke">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Eutergesundheit</li>
+                                    <li>Pferdeostheotherapie</li>
+                                    <li>Ministerin für soziales und Blödsinn</li>
+                                    <li>Samenverwaltung (xD) </li>
+                                    
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end accordion -->
                       
                     </div>
                 </div>
             </div>
-            
-
+            <!--Tina-->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Nicolas Vockrodt" data-bs-vet-image="images/Nic_1.jpg""> 
-                        <img src="images/Nic_1.jpg" class="card-img-top" alt="..."  > 
-                    </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Tina Rebelein" data-bs-vet-image="images/Tina_4.JPG"> <img src="images/Tina_4.JPG" class="card-img-top" alt="..."> </a>
                   
                     <div class="card-body">
-                      <h5 class="card-title">Dr. Nicolas Vockrodt</h5>
-                      <h6 class="card-subtitle mb-2 text-body-secondary">Groß & Kleintiere</h6>
-                      <p class="card-text">Short description  </p>
+                      <h5 class="card-title">Dr. Tina Rebelein</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Kleintiere</h6>
+                      <div class="accordion vet-card-accordion" id="accordionTina">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTina" aria-expanded="false" aria-controls="collapseOne">
+                              <strong>Schwerpunkte</strong>
+                            </button>
+                          </h2>
+                          <div id="collapseTina" class="accordion-collapse collapse" data-bs-parent="#accordionTina">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Chirurgie</li>
+                                    <li>Kardiologie</li>
+                                    <li>Augenheilkunde</li>
+                                    <li>Adventszeit</li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end accordion -->
                       
                     </div>
                 </div>
             </div>
+            <!--Basti-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card vet-card">
+
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Sebastian Schrumpf" data-bs-vet-image="images/Basti_2.JPG"> <img src="images/Basti_2.JPG" class="card-img-top" alt="..."> </a>
+                  
+                    <div class="card-body">
+                      <h5 class="card-title">Sebastian Schrumpf</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">Nutz & Kleintiere</h6>
+                      <div class="accordion vet-card-accordion" id="accordionBasti">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasti" aria-expanded="false" aria-controls="collapseOne">
+                              <strong>Schwerpunkte</strong>
+                            </button>
+                          </h2>
+                          <div id="collapseBasti" class="accordion-collapse collapse" data-bs-parent="#accordionBasti">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Chirurgie</li>
+                                    <li>Bienen und Fischmedizin</li>
+
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end accordion -->
+                      
+                    </div>
+                </div>
+            </div>
+
         </div>
         
        <hr>
@@ -277,7 +413,7 @@
               
                 <div class="card-body">
                   <h5 class="card-title">Gabi Müller</h5>
-                  <p class="card-text">Short description </p>
+                  
                   
                 </div>
             </div>

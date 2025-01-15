@@ -3,3 +3,5 @@
 
 # exclude gimp files
 *.xcf
+
+info
