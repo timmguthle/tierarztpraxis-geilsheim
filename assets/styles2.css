@@ -394,3 +394,28 @@ a:hover {
 	background-color: #6d6721!important;
 	border-color: #6d6721!important;
 }
+
+.labmagen-image img {
+    height: 100%; 
+    width: 100%;
+    object-fit: contain; 
+} 
+
+#carouselLabmagen .carousel-item {
+	height: 35rem;
+
+	background: #efefef;
+	color: white;
+	position: relative;
+}
+
+#carouselLabmagen{
+	height: 35rem;
+	width: auto;
+}
+
+#carouselLabmagen .carousel-control-prev-icon, #carouselLabmagen .carousel-control-next-icon {
+	background-color: #8d8741;
+	border-radius: 5px;
+}
+
