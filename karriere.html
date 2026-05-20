@@ -37,7 +37,7 @@
 			transform: translateY(-2px);
 		}
 		.job-card-header {
-			background-color: #007bff;
+			background-color: #8d8741;
 			color: white;
 			padding: 1.5rem;
 			border-radius: 8px 8px 0 0;
@@ -51,6 +51,40 @@
 			font-size: 0.95rem;
 			opacity: 0.95;
 		}
+		.job-card-content {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+		@media (min-width: 992px) {
+			.job-card-content {
+				flex-direction: row;
+				align-items: stretch;
+			}
+		}
+		.job-card-text {
+			flex: 1;
+		}
+		.job-card-image {
+			width: 100%;
+			overflow: hidden;
+			border-radius: 8px 8px 8px 8px;
+			min-height: 280px;
+		}
+		@media (min-width: 992px) {
+			.job-card-image {
+				width: 40%;
+				border-radius: 8px 8px 8px 8px;
+				min-height: auto;
+                margin: 5px;
+			}
+		}
+		.job-card-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
 		.job-details {
 			padding: 1.5rem;
 		}
@@ -60,7 +94,7 @@
 			align-items: flex-start;
 		}
 		.job-detail-icon {
-			color: #007bff;
+			color: #943330;
 			margin-right: 1rem;
 			min-width: 24px;
 			font-size: 1.1rem;
@@ -104,13 +138,15 @@
 			gap: 0.5rem;
 		}
 		.btn-apply {
+            color: white;
 			flex: 1;
-			background-color: #28a745;
-			border-color: #28a745;
+			background-color: #8d8741;
+			border-color: #8d8741;
 		}
 		.btn-apply:hover {
-			background-color: #218838;
-			border-color: #218838;
+            color: white;
+			background-color: #6d6721;
+			border-color: #6d6721;
 		}
 		.btn-more-info {
 			flex: 1;
@@ -136,11 +172,11 @@
         <div class="container-fluid py-5" style="background-color: #efefef;">
             <h1>Karriere bei der Tierarztpraxis Geilsheim</h1>
             <p class="lead">
-                Werden Sie Teil unseres engagierten Teams! Wir suchen motivierte Veterinäre und Fachkräfte, die unsere Leidenschaft für Tiermedizin teilen.
+                Werde Teil unseres engagierten Teams! Wir suchen motivierte Veterinäre und Fachkräfte, die unsere Leidenschaft für Tiermedizin teilen.
             </p>
             <p>
-                Ob Kleintiere, Großtiere oder Pferde – bei uns finden Sie eine vielfältige und anspruchsvolle Tätigkeit in einem modernen, kollegialen Umfeld. 
-                Wir bieten attraktive Arbeitsbedingungen, kontinuierliche Fortbildung und die Möglichkeit, Ihre Fähigkeiten weiterzuentwickeln.
+                Ob Kleintiere, Großtiere oder Pferde – bei uns findest Du eine vielfältige und anspruchsvolle Tätigkeit in einem modernen, kollegialen Umfeld. 
+                Wir bieten attraktive Arbeitsbedingungen und die Möglichkeit, Deine Fähigkeiten weiterzuentwickeln.
             </p>
         </div>
         <hr>
@@ -151,71 +187,85 @@
             
             <div class="row gy-4">
                 <!-- Job Offer 1: Tierarzt/in Großtiere -->
-                <div class="col-12 col-lg-6">
+                <div class="col-12">
                     <div class="job-card">
                         <div class="job-card-header">
-                            <div class="job-card-title">Tierarzt/in Großtiere</div>
-                            <div class="job-card-subtitle">Vollzeit oder Teilzeit</div>
+                            <div class="job-card-title">Tierarzt (m/w/d)</div>
+                            <div class="job-card-subtitle">Vollzeit</div>
                         </div>
-                        <div class="job-details">
-                            <div class="job-detail-item">
-                                <div class="job-detail-icon">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                                <div class="job-detail-content">
-                                    <div class="job-detail-label">Einsatzbereich</div>
-                                    <div class="job-detail-value">Rinder, Pferde & weitere Nutztiere</div>
+                        <div class="job-card-content">
+                            <div class="job-card-text">
+                                <div class="job-details">
+                                    <!--
+                                    <div class="job-detail-item">
+                                        <div class="job-detail-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="job-detail-content">
+                                            <div class="job-detail-label">Schwerpunkt</div>
+                                            <div class="job-detail-value">Rinder und Kleintiere mit Anteil Pferd und Schwein</div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="job-detail-item">
+                                        <div class="job-detail-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="job-detail-content">
+                                            <div class="job-detail-label">Standort</div>
+                                            <div class="job-detail-value">Geilsheim 200a, 91717 Wassertrüdingen</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="job-detail-item">
+                                        <div class="job-detail-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="job-detail-content">
+                                            <div class="job-detail-label">Anforderungen</div>
+                                            <div class="job-detail-value">Abgeschlossenes Veterinärmedizinstudium</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="job-description">
+                                        <h6>Das bringst du mit</h6>
+                                        <ul>
+                                            <li>Motivation und Engagement</li>
+                                            <li>Freundlicher Umgang mit Mitarbeitern und Kunden</li>
+                                            <li>Teamgeist und Zuverlässigkeit</li>
+                                            <li>Freude an der Arbeit mit Rindern und Nutztieren</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="job-detail-item">
+                                        <div class="job-detail-icon">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="job-detail-content">
+                                            <div class="job-detail-label">Wir bieten</div>
+                                            <div class="job-detail-value">
+                                                <ul>
+                                                    <li>Tolles und familiäres Arbeitsumfeld</li>
+                                                    <li>Faire Bezahlung</li>
+                                                    <li>Freizeitausgleich für geleistete Dienste</li>
+                                                    <li>Abwechslungsreiche Tätigkeit in einer modernen Praxis</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="job-detail-item">
-                                <div class="job-detail-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="job-detail-content">
-                                    <div class="job-detail-label">Standort</div>
-                                    <div class="job-detail-value">Geilsheim 200a, 91717 Wassertrüdingen</div>
-                                </div>
-                            </div>
-
-                            <div class="job-detail-item">
-                                <div class="job-detail-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div class="job-detail-content">
-                                    <div class="job-detail-label">Anforderungen</div>
-                                    <div class="job-detail-value">Abgeschlossenes Veterinärstudium, Approbation</div>
-                                </div>
-                            </div>
-
-                            <div class="job-description">
-                                <h6>Ihre Aufgaben</h6>
-                                <ul>
-                                    <li>Klinische Untersuchung und Diagnose von Großtieren</li>
-                                    <li>Chirurgische Eingriffe und Behandlungen</li>
-                                    <li>Bestandsbetreuung und Präventionsmaßnahmen</li>
-                                    <li>Mitarbeit in einem erfahrenen Team</li>
-                                </ul>
-                            </div>
-
-                            <div class="job-detail-item">
-                                <div class="job-detail-icon">
-                                    <i class="fas fa-heart"></i>
-                                </div>
-                                <div class="job-detail-content">
-                                    <div class="job-detail-label">Wir bieten</div>
-                                    <div class="job-detail-value">Wettbewerbsfähiges Gehalt, Fortbildungen, kollegiale Atmosphäre</div>
-                                </div>
+                            <div class="job-card-image">
+                                <img src="images/stellenangebot.jpg" alt="Großtiere Behandlung">
                             </div>
                         </div>
                         <div class="job-card-footer">
                             <button class="btn btn-apply btn-sm" onclick="contactUs('Großtiere')">Jetzt bewerben</button>
-                            <button class="btn btn-more-info btn-sm" data-bs-toggle="collapse" data-bs-target="#details1">Mehr Info</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Job Offer 2: Tierarzt/in Kleintiere -->
+<!--                 
                 <div class="col-12 col-lg-6">
                     <div class="job-card">
                         <div class="job-card-header">
@@ -280,7 +330,6 @@
                     </div>
                 </div>
 
-                <!-- Job Offer 3: Praktikantin/Praktikant -->
                 <div class="col-12 col-lg-6">
                     <div class="job-card">
                         <div class="job-card-header">
@@ -345,7 +394,6 @@
                     </div>
                 </div>
 
-                <!-- Job Offer 4: Spezialist/in für Bildgebung -->
                 <div class="col-12 col-lg-6">
                     <div class="job-card">
                         <div class="job-card-header">
@@ -410,11 +458,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <hr>
 
-        <!-- Why work with us section -->
+        <!-- Why work with us section 
         <div class="py-5">
             <h2 class="mb-4">Warum bei uns arbeiten?</h2>
             <div class="row gy-4">
@@ -457,32 +505,20 @@
             </div>
         </div>
 
-        <hr>
+        <hr>-->
 
-        <!-- Contact Section -->
-        <div class="py-5">
-            <h2 class="mb-4">Interessiert?</h2>
-            <div class="alert alert-info" role="alert">
-                <h5>Kontaktieren Sie uns!</h5>
-                <p>Für Fragen zu den Stellenangeboten oder um Ihre Bewerbung einzureichen, nehmen Sie bitte Kontakt mit uns auf:</p>
-                <p class="mb-0">
-                    <strong>E-Mail:</strong> <a href="mailto:bewerbung@tierarztpraxis-geilsheim.de">bewerbung@tierarztpraxis-geilsheim.de</a><br>
-                    <strong>Telefon:</strong> <a href="tel:09832 214">09832-214</a><br>
-                    <strong>Adresse:</strong> Tierarztpraxis Geilsheim, Geilsheim 200a, 91717 Wassertrüdingen
-                </p>
-            </div>
-        </div>
+        
     </div>
 
     <!-- Footer -->
-    <div id="my_footer" class="mt-auto"></div>
+    <footer id="my_footer" class="footer mt-auto py-3"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function contactUs(position) {
             const subject = encodeURIComponent(`Bewerbung: ${position}`);
             const body = encodeURIComponent(`Guten Tag,\n\nHiermit möchte ich mich auf die Position "${position}" bewerben.\n\nFreundliche Grüße`);
-            window.location.href = `mailto:bewerbung@tierarztpraxis-geilsheim.de?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:kontakt@tierarztpraxis-geilsheim.de`;
         }
     </script>
 </body>
