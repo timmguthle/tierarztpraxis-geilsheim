@@ -395,6 +395,21 @@ a:hover {
 	border-color: #6d6721!important;
 }
 
+.btn-secondary {
+	background-color: #943330;
+	border-color: #943330;
+}
+
+.btn-secondary:hover {
+	background-color: #722725;
+	border-color: #722725;
+}
+
+.btn-secondary:active {
+	background-color: #943330!important;
+	border-color: #943330!important;
+}
+
 .labmagen-image img {
     height: 100%; 
     width: 100%;
