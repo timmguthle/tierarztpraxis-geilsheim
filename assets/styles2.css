@@ -4,6 +4,11 @@
 	font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
+/* width/height attributes only reserve space; keep the aspect ratio when CSS sets the width */
+img[height] {
+	height: auto;
+}
+
 .alert {
     margin: 0.3rem;
     padding: 0.6rem 1rem;
