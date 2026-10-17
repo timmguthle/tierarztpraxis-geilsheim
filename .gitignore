@@ -5,3 +5,11 @@
 *.xcf
 
 info
+
+# FTP-Zugangsdaten
+.deploy.env
+
+# Nicht Teil der Website
+.claude/
+deploy.sh
+.deploy.env.example
