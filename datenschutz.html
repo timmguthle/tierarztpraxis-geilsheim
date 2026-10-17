@@ -18,7 +18,11 @@
 	<script> 
 		$(document).ready(function(){
 			$("#my_footer").load("assets/footer.html");
-			$("#my_navbar").load("assets/navbar.html");
+			// navbar loads after the browser already jumped to #anchor, so scroll again
+			$("#my_navbar").load("assets/navbar.html", function() {
+				const target = location.hash && document.getElementById(location.hash.slice(1));
+				if (target) target.scrollIntoView();
+			});
 			$("#notfall-collapse").load("assets/notfallcard.html");
 		});
 	</script> 
@@ -52,13 +56,15 @@
         <p>Sofern Sie uns eine Einwilligung erteilt haben, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen.</p>
         <p>Sie können sich jederzeit mit einer Beschwerde an eine Aufsichtsbehörde wenden, z. B. an die zuständige Aufsichtsbehörde des Bundeslands Ihres Wohnsitzes oder an die für uns als verantwortliche Stelle zuständige Behörde.</p>
         <p>Eine Liste der Aufsichtsbehörden (für den nichtöffentlichen Bereich) mit Anschrift finden Sie unter: <a href="https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html" target="_blank" rel="noopener nofollow">https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html</a>.</p>
-        <p></p><h2 style="padding-top: 3rem;">Verwendung von Google Maps</h2>
-        <p>Auf dieser Website nutzen wir das Angebot von Google Maps. Google Maps wird von Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (nachfolgend „Google“) betrieben. Dadurch können wir Ihnen interaktive Karten direkt in der Webseite anzeigen und ermöglichen Ihnen die komfortable Nutzung der Karten-Funktion.<br>Nähere Informationen über die Datenverarbeitung durch Google können Sie den Google-Datenschutzhinweisen entnehmen: <a href="https://policies.google.com/privacy" rel="noopener nofollow" target="_blank">https://policies.google.com/privacy</a>. Dort können Sie im Datenschutzcenter auch Ihre persönlichen Datenschutz-Einstellungen verändern.</p>
-        <p>Ausführliche Anleitungen zur Verwaltung der eigenen Daten im Zusammenhang mit Google-Produkten finden Sie hier: <a href="https://www.dataliberation.org/" rel="noopener nofollow" target="_blank">https://www.dataliberation.org</a></p>
-        <p>Durch den Besuch der Website erhält Google Informationen, dass Sie die entsprechende Unterseite unserer Webseite aufgerufen haben. Dies erfolgt unabhängig davon, ob Google ein Nutzerkonto bereitstellt, über das Sie eingeloggt sind, oder ob kein Nutzerkonto besteht. Wenn Sie bei Google eingeloggt sind, werden Ihre Daten direkt Ihrem Konto zugeordnet. </p>
-        <p>Wenn Sie die Zuordnung in Ihrem Profil bei Google nicht wünschen, müssen Sie sich vor Aktivierung des Buttons bei Google ausloggen. Google speichert Ihre Daten als Nutzungsprofile und nutzt sie für Zwecke der Werbung, Marktforschung und/oder bedarfsgerechter Gestaltung seiner Websites. Eine solche Auswertung erfolgt insbesondere (selbst für nicht eingeloggte Nutzer) zur Erbringung bedarfsgerechter Werbung und um andere Nutzer des sozialen Netzwerks über Ihre Aktivitäten auf unserer Website zu informieren. Ihnen steht ein Widerspruchsrecht zu gegen die Bildung dieser Nutzerprofile, wobei Sie sich zur Ausübung dessen an Google richten müssen. </p>
-        <h3 style="padding-top: 3rem;">Widerruf der Einwilligung:</h3>
-        <p>Vom Anbieter wird derzeit keine Möglichkeit für einen einfachen Opt-out oder ein Blockieren der Datenübertragung angeboten. Wenn Sie eine Nachverfolgung Ihrer Aktivitäten auf unserer Website verhindern wollen, widerrufen Sie bitte im Cookie-Consent-Tool Ihre Einwilligung für die entsprechende Cookie-Kategorie oder alle technisch nicht notwendigen Cookies und Datenübertragungen. In diesem Fall können Sie unsere Website jedoch ggfs. nicht oder nur eingeschränkt nutzen.</p>
+        <h2 id="google-maps" style="padding-top: 3rem;">Verwendung von Google Maps</h2>
+        <p>Auf unserer Kontaktseite können Sie sich eine Karte von Google Maps anzeigen lassen, um den Weg zu unserer Praxis zu finden. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (nachfolgend „Google“).</p>
+        <p>Die Karte wird <b>nicht automatisch geladen</b>. Erst wenn Sie auf den Button „Karte anzeigen“ klicken, wird eine Verbindung zu den Servern von Google hergestellt. Solange Sie die Karte nicht aktivieren, werden keine Daten an Google übermittelt.</p>
+        <p>Nach dem Aktivieren der Karte erhält Google insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Aufrufs, die Information, welche Seite unserer Website Sie aufgerufen haben, sowie Angaben zu Ihrem Browser und Betriebssystem. Google kann dabei Cookies oder ähnliche Technologien auf Ihrem Endgerät speichern bzw. auslesen. Sind Sie bei Google eingeloggt, kann Google diese Daten Ihrem Nutzerkonto zuordnen. Wenn Sie das nicht wünschen, loggen Sie sich vor dem Aktivieren der Karte bei Google aus.</p>
+        <p>Rechtsgrundlage für die Verarbeitung ist Ihre Einwilligung, die Sie durch das Anklicken des Buttons erteilen (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG).</p>
+        <p>Dabei kann es zu einer Übermittlung von Daten an die Google LLC in den USA kommen. Die Google LLC ist nach dem EU-US Data Privacy Framework zertifiziert, für das die EU-Kommission einen Angemessenheitsbeschluss nach Art. 45 DSGVO erlassen hat.</p>
+        <p>Nähere Informationen über die Datenverarbeitung durch Google finden Sie in der Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" rel="noopener nofollow" target="_blank">https://policies.google.com/privacy</a>. Dort können Sie auch Ihre persönlichen Datenschutz-Einstellungen verwalten.</p>
+        <h3 style="padding-top: 3rem;">Widerruf der Einwilligung</h3>
+        <p>Ihre Einwilligung gilt nur für den jeweiligen Seitenaufruf. Wenn Sie die Seite neu laden oder erneut aufrufen, wird die Karte nicht mehr angezeigt und es werden keine weiteren Daten an Google übermittelt, bis Sie den Button erneut anklicken. Sie können Ihre Einwilligung also jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie die Karte nicht erneut aktivieren. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt.</p>
         <p></p><h2 style="padding-top: 3rem;">SSL-Verschlüsselung</h2>
         <p style="padding-bottom: 2rem;">Um die Sicherheit Ihrer Daten bei der Übertragung zu schützen, verwenden wir dem aktuellen Stand der Technik entsprechende Verschlüsselungsverfahren (z. B. SSL) über HTTPS.</p>
         <p></p><hr>

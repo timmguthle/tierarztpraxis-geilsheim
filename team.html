@@ -19,7 +19,11 @@
 	<script> 
 		$(document).ready(function(){
 			$("#my_footer").load("assets/footer.html");
-			$("#my_navbar").load("assets/navbar.html");
+			// navbar loads after the browser already jumped to #anchor, so scroll again
+			$("#my_navbar").load("assets/navbar.html", function() {
+				const target = location.hash && document.getElementById(location.hash.slice(1));
+				if (target) target.scrollIntoView();
+			});
 			$("#notfall-collapse").load("assets/notfallcard.html");
 		});
 	</script> 

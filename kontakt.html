@@ -18,7 +18,11 @@
 	<script> 
 		$(document).ready(function(){
 			$("#my_footer").load("assets/footer.html");
-			$("#my_navbar").load("assets/navbar.html");
+			// navbar loads after the browser already jumped to #anchor, so scroll again
+			$("#my_navbar").load("assets/navbar.html", function() {
+				const target = location.hash && document.getElementById(location.hash.slice(1));
+				if (target) target.scrollIntoView();
+			});
 			$("#notfall-collapse").load("assets/notfallcard.html");
 		});
 	</script> 
@@ -86,8 +90,8 @@
 			</div>
 			<div class="container text-center" style="position: absolute;">
 				<p style="font-size: 14px; color: white">
-					Durch das aktivieren der Karte werden Daten an Google Maps übermittelt. <br>Weitere Informationen
-					können Sie unserer <a href="datenschutz.html" style="text-decoration: none; color: white;">Datenschutzerklärung</a> entnehmen.
+					Durch das Aktivieren der Karte werden Daten (u.&nbsp;a. Ihre IP-Adresse) an Google übermittelt. <br>Weitere Informationen
+					können Sie unserer <a href="datenschutz.html#google-maps" style="color: white;">Datenschutzerklärung</a> entnehmen.
 				</p>
 				<a style="font-size: 26px" href="#Anfahrt" class="btn btn-primary f-btn" id="map_bild" onclick="block()">Karte anzeigen</a>
 			</div>
@@ -116,7 +120,7 @@
 		<div class="row text-center kon_head">
 			<p>Gerne sind wir auch außerhalb unserer Sprechzeiten fast immer für Sie und Ihre plötzlich erkrankten Tiere bereit.
 
-			Die für alle Tierärzte verpflichtende Gebührenordnung für Tierärzte (GOT) wurde zum 14.2.2020 geändert.
+			Die für alle Tierärzte verpflichtende Gebührenordnung für Tierärzte (GOT) gilt in ihrer aktuellen Fassung seit dem 22.11.2022.
 
 			Das betrifft Sie als unsere Kunden wie folgt: <br>
 
