@@ -1,170 +1,151 @@
 <!DOCTYPE html>
-<html lang="de" class="h-100">
+<html lang="de">
 <head>
 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#faf8f2">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
-	<link
-	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-	  rel="stylesheet"
-	/>
-
-	<link rel="stylesheet" type="text/css" href="assets/styles2.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles3.css">
 	<link rel="icon" href="images/logo_icon.png">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-	<script> 
-		$(document).ready(function(){
-			$("#my_footer").load("assets/footer.html");
-			// navbar loads after the browser already jumped to #anchor, so scroll again
-			$("#my_navbar").load("assets/navbar.html", function() {
-				const target = location.hash && document.getElementById(location.hash.slice(1));
-				if (target) target.scrollIntoView();
-			});
-			$("#notfall-collapse").load("assets/notfallcard.html");
-		});
-	</script> 
-
+	<!-- lädt Navigation, Notfallkarte und Footer -->
+	<script src="assets/site.js" defer></script>
 
 	<title>Kontakt - Tierarztpraxis Geilsheim</title>
 </head>
-<body class="d-flex flex-column h-100">
+<body>
 
-    <!-- Navigation -->
-    <div id="my_navbar"></div>
+	<!-- Navigation und Notfall card -->
+	<header class="site-header">
+		<div id="my_navbar"></div>
+		<div class="collapse" id="notfall-collapse"></div>
+	</header>
 
-	<!-- Notfall card -->
-	<div class="collapse" id="notfall-collapse"></div>
-
-    <!-- Inhalt Kontakt -->
-    <section id="kontakt">
+	<!-- Inhalt Kontakt -->
+	<main>
+	<section id="kontakt">
 	<div class="container">
-		<div class="pageTitle mt-5">
-			<div class="overlay-image" style="background-image: url('images/karte.jpg');">
-			</div>
-			<div class="pageTitleText text-center">
-				<h1 class="fw-bolder">Kontakt</h1>
-			</div>
+		<div class="page-hero">
+			<div class="overlay-image" style="background-image: url('images/karte.jpg');"></div>
+			<h1>Kontakt</h1>
 		</div>
 
-		<div class="row text-center kon_head">
-			<p class="fs-4">Behandlungstermine immer nach telefonischer Anmeldung während der Öffnungszeiten</p>
-			<p class="fs-5">Außerhalb der Öffnungszeiten sind wir für plötzliche Erkrankungsfälle Ihrer Tiere auch telefonisch erreichbar und vereinbaren dann nach Möglichkeit einen Termin. Bitte beachten Sie hierbei unsere <a href="#Notfallregelung" class="link_kon">Notfallregelung</a></p>
+		<div class="narrow text-center section-sm">
+			<p class="fs-4 fw-semibold">Behandlungstermine immer nach telefonischer Anmeldung während der Öffnungszeiten</p>
+			<p class="lead mb-0">Außerhalb der Öffnungszeiten sind wir für plötzliche Erkrankungsfälle Ihrer Tiere auch telefonisch erreichbar und vereinbaren dann nach Möglichkeit einen Termin. Bitte beachten Sie hierbei unsere <a href="#Notfallregelung" class="link_kon">Notfallregelung</a></p>
 		</div>
 
-		<div class="row">
-			<div class="col kon_daten">
-				<div class="row text-center">
-					<h2>Tierarztpraxis Geilsheim</h2>
-					<h3>Dr. U. Güthle</h3>
-					<h3>Dr. N. Vockrodt</h3>
-					<br>
-					<p>Geilsheim 200a <br> 91717 Wassertrüdingen</p>
+		<div class="row g-4">
+			<div class="col-lg-7">
+				<div class="info-card">
+					<div class="info-card__head">
+						<span class="icon-tile"><i class="fas fa-clinic-medical"></i></span>
+						<h2>Tierarztpraxis Geilsheim</h2>
+					</div>
+					<div class="row g-4">
+						<div class="col-sm-5">
+							<p class="fw-bold mb-2">Dr. U. Güthle <br> Dr. N. Vockrodt</p>
+							<p class="mb-0">Geilsheim 200a <br> 91717 Wassertrüdingen</p>
+						</div>
+						<div class="col-sm-7">
+							<ul class="contact-list">
+								<li><b>Tel.: </b><a href="tel:+499832214" class="link_kon">09832-214</a></li>
+								<li><b>E-Mail: </b><a href="mailto:kontakt@tierarztpraxis-geilsheim.de" class="link_kon">kontakt@tierarztpraxis-geilsheim.de</a></li>
+								<li><b>Fax. </b>09832-9630</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="row text-left">
-
-					<br>
-					<p><b>Tel.: </b><a href="tel:+499832214" class="link_kon">09832-214</a></p>
-					<p><b>E-Mail: </b><a href="mailto:kontakt@tierarztpraxis-geilsheim.de" class="link_kon">kontakt@tierarztpraxis-geilsheim.de</a></p>
-					<p><b>Fax. </b>09832-9630</p>
+			</div>
+			<div class="col-lg-5">
+				<div class="info-card info-card--soft">
+					<div class="info-card__head">
+						<span class="icon-tile" style="background: #fff;"><i class="far fa-clock"></i></span>
+						<h2>Öffnungszeiten:</h2>
+					</div>
+					<p class="fs-5 fw-semibold">Montag - Freitag: 8.00 - 18.00 Uhr</p>
+					<a href="tel:+499832214" class="btn btn-primary"><i class="fas fa-phone-alt me-2"></i>09832-214</a>
 				</div>
-
-			</div>
-			<div class="col text-center kon_daten">
-				<h2>Öffnungszeiten:</h2>
-				<p>Montag - Freitag: 8.00 - 18.00 Uhr</p>
 			</div>
 		</div>
 
-		<div class="row pb-5" id="Anfahrt">
-			<div class="col text-center kon_head">
-				<h1>Anfahrt</h1>
+		<h2 class="section-title text-center mt-section" id="Anfahrt">Anfahrt</h2>
+
+		<div class="map-box">
+			<div id="map_div">
+				<div class="overlay-image" style="background-image: url('images/map_bild.png');"></div>
+				<div>
+					<p>
+						Durch das Aktivieren der Karte werden Daten (u.&nbsp;a. Ihre IP-Adresse) an Google übermittelt. <br>Weitere Informationen
+						können Sie unserer <a href="datenschutz.html#google-maps">Datenschutzerklärung</a> entnehmen.
+					</p>
+					<a href="#Anfahrt" class="btn btn-primary btn-lg" id="map_bild" onclick="block()">Karte anzeigen</a>
+				</div>
+			</div>
+
+			<iframe id="map" title="Anfahrt Google Maps" scrolling="no" style="display: none;"></iframe>
+		</div>
+
+		<div class="row g-4 mt-section">
+			<div class="col-lg-6">
+				<div class="info-card">
+					<div class="info-card__head">
+						<span class="icon-tile"><i class="fas fa-paw"></i></span>
+						<h2>Kleintiere</h2>
+					</div>
+					<p>Um lange Wartezeiten zu vermeiden und ausreichend Zeit für jeden Patienten zu haben, haben wir keine offene Sprechstunde.
+					Bitte vereinbaren Sie daher <b>für Behandlungen immer telefonisch einen Termin.</b> <br> <br>
+					Rufen Sie insbesondere auch bei Notfällen <b>immer</b> vorher an.
+					</p>
+
+					<div class="callout callout--red mt-4" id="Notfallregelung">
+						<h3>Notfallregelung</h3>
+						<p>Gerne sind wir auch außerhalb unserer Sprechzeiten fast immer für Sie und Ihre plötzlich erkrankten Tiere bereit.
+
+						Die für alle Tierärzte verpflichtende Gebührenordnung für Tierärzte (GOT) gilt in ihrer aktuellen Fassung seit dem 22.11.2022.
+
+						Das betrifft Sie als unsere Kunden wie folgt: <br>
+
+						Nutzen Sie für plötzliche Erkrankungsfälle unseren Notdienst
+						</p>
+						<ul>
+							<li><b>zwischen 18 Uhr abends und 8 Uhr morgens</b> oder</li>
+							<li><b>samstags, sonn- und feiertags</b></li>
+						</ul>
+						<p>muss eine pauschale <b>Notdienstgebühr von 50 € (netto)</b> und mindestens der <b>2-fache Satz der Gebührenordnung für Tierärzte</b> abgerechnet werden.</p>
+						<p>Wir danken für Ihr Verständnis und hoffen durch diese neue Gesetzgebung auch weiterhin einen Notdienst zur Verfügung stellen zu können.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6">
+				<div class="info-card">
+					<div class="info-card__head">
+						<span class="icon-tile"><i class="fas fa-horse"></i></span>
+						<h2>Großtiere</h2>
+					</div>
+					<p>Bitte melden Sie Großtierbesuche immer bis spätestens <b>8 Uhr für die Vormittagstour </b>und bis spätestens <b>17 Uhr für die Abendtour </b> an. <br> <br> Für dringende Notfälle sind wir unter der Praxisnummer <b>09832 214</b> immer erreichbar.
+
+					</p>
+
+					<div class="callout mt-4">
+						<h3>Anmeldung von Besamungen</h3>
+						<p>Bitte unter Telefon 09832 1317 auf den Anrufbeantworter sprechen, dieser wird morgens um 7 Uhr und nachmittags um 16 Uhr abgehört.
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
-
-
-		<div class="row align-items-center" style="height: 400px; position: relative; background: #000" id="map_div">
-			<div class="overlay-image" style="background-image: url('images/map_bild.png');">
-			</div>
-			<div class="container text-center" style="position: absolute;">
-				<p style="font-size: 14px; color: white">
-					Durch das Aktivieren der Karte werden Daten (u.&nbsp;a. Ihre IP-Adresse) an Google übermittelt. <br>Weitere Informationen
-					können Sie unserer <a href="datenschutz.html#google-maps" style="color: white;">Datenschutzerklärung</a> entnehmen.
-				</p>
-				<a style="font-size: 26px" href="#Anfahrt" class="btn btn-primary f-btn" id="map_bild" onclick="block()">Karte anzeigen</a>
-			</div>
-		</div>
-
-		<iframe id="map" title="Anfahrt Google Maps" width="100%" height="400"  frameborder="0" scrolling="no" marginheight="0"
-				marginwidth="0" style='display: none;'></iframe>
-
-		<div class="row">
-			<div class="col text-center kon_head" >
-				<h1>Kleintiere</h1>
-			</div>
-		</div>
-
-		<div class="row text-center kon_head">
-			<p>Um lange Wartezeiten zu vermeiden und ausreichend Zeit für jeden Patienten zu haben, haben wir keine offene Sprechstunde.
-			Bitte vereinbaren Sie daher <b>für Behandlungen immer telefonisch einen Termin.</b> <br> <br>
-			Rufen Sie insbesondere auch bei Notfällen <b>immer</b> vorher an.
-			</p>
-		</div>
-
-		<div class="row text-center kon_daten" id="Notfallregelung">
-			<h2>Notfallregelung</h2>
-		</div>
-
-		<div class="row text-center kon_head">
-			<p>Gerne sind wir auch außerhalb unserer Sprechzeiten fast immer für Sie und Ihre plötzlich erkrankten Tiere bereit.
-
-			Die für alle Tierärzte verpflichtende Gebührenordnung für Tierärzte (GOT) gilt in ihrer aktuellen Fassung seit dem 22.11.2022.
-
-			Das betrifft Sie als unsere Kunden wie folgt: <br>
-
-			Nutzen Sie für plötzliche Erkrankungsfälle unseren Notdienst
-			</p>
-			<ul style="list-style-type: none;">
-				<li><b>zwischen 18 Uhr abends und 8 Uhr morgens</b> oder</li>
-				<li><b>samstags, sonn- und feiertags</b></li>
-			</ul>
-			<p>muss eine pauschale <b>Notdienstgebühr von 50 € (netto)</b> und mindestens der <b>2-fache Satz der Gebührenordnung für Tierärzte</b> abgerechnet werden.</p> <br><br>
-			<p>Wir danken für Ihr Verständnis und hoffen durch diese neue Gesetzgebung auch weiterhin einen Notdienst zur Verfügung stellen zu können.
-			</p>
-		</div>
-
-		<div class="row">
-			<div class="col text-center kon_head" >
-				<h1>Großtiere</h1>
-			</div>
-		</div>
-
-		<div class="row text-center kon_head">
-			<p>Bitte melden Sie Großtierbesuche immer bis spätestens <b>8 Uhr für die Vormittagstour </b>und bis spätestens <b>17 Uhr für die Abendtour </b> an. <br> <br> Für dringende Notfälle sind wir unter der Praxisnummer <b>09832 214</b> immer erreichbar.
-
-			</p>
-		</div>
-
-		<div class="row text-center kon_daten">
-			<h2>Anmeldung von Besamungen</h2>
-		</div>
-
-		<div class="row text-center kon_head" style="padding-bottom: 40px;">
-			<p>Bitte unter Telefon 09832 1317 auf den Anrufbeantworter sprechen, dieser wird morgens um 7 Uhr und nachmittags um 16 Uhr abgehört.
-			</p>
-		</div>
-
-
 
 	</div>
-</section>
+	</section>
+	</main>
 
 <!-- Footer -->
-<footer id="my_footer" class="footer mt-auto py-3"></footer>
-
-
+<footer id="my_footer" class="site-footer"></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -176,8 +157,6 @@
   document.getElementById("map").style.display = "block";
 }
 </script>
-
-
 
 </body>
 </html>

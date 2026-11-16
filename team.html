@@ -1,82 +1,46 @@
 <!DOCTYPE html>
-<html lang="de" class="h-100">
+<html lang="de">
 <head>
 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#faf8f2">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
-
-	<link
-	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-	  rel="stylesheet"
-	/>
-
-	<link rel="stylesheet" type="text/css" href="assets/styles2.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles3.css">
 	<link rel="icon" href="images/logo_icon.png">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-	<script> 
-		$(document).ready(function(){
-			$("#my_footer").load("assets/footer.html");
-			// navbar loads after the browser already jumped to #anchor, so scroll again
-			$("#my_navbar").load("assets/navbar.html", function() {
-				const target = location.hash && document.getElementById(location.hash.slice(1));
-				if (target) target.scrollIntoView();
-			});
-			$("#notfall-collapse").load("assets/notfallcard.html");
-		});
-	</script> 
+	<!-- lädt Navigation, Notfallkarte und Footer -->
+	<script src="assets/site.js" defer></script>
 
 	<title>Team - Tierarztpraxis Geilsheim</title>
 </head>
-<body class="d-flex flex-column h-100" style="background-color: #efefef;">
+<body>
 
-    <!-- Navigation -->
-    <div id="my_navbar"></div>
-
-	<!-- Notfall card -->
-	<div class="collapse" id="notfall-collapse"></div>
+	<!-- Navigation und Notfall card -->
+	<header class="site-header">
+		<div id="my_navbar"></div>
+		<div class="collapse" id="notfall-collapse"></div>
+	</header>
 
     <!-- Inhalt Team -->
-    <div class="container" style="background-color: #efefef;">
-        <!--<div class="pageTitle mt-5">
-			<div class="overlay-image" style="background-image: url('images/team_k.jpg');">
-			</div>
-			<div class="pageTitleText text-center">
-				<h1 class="fw-bolder">Unser Team</h1>
-			</div>
-		</div>-->
-        <div class="container-fluid py-5" style="background-color: #efefef;">
-            <h1 >Unser Praxisteam</h1>
-            <p>
+    <main>
+    <div class="container">
+        <div class="page-head">
+            <h1>Unser Praxisteam</h1>
+            <p class="lead">
                 Lernen Sie unser Team kennen!
             </p>
-            <div>
-                <!-- <div class="col">
-                    <a class="btn btn-primary" type="button" href="#tierarztHeading">Tierärzte</a>
-                </div>
-                <div class="col">
-                    <a class="btn btn-primary" type="button" href="#tfaHeading">Tiermedizinische Fachangestellte</a>
-                </div>
-                <div class="col">
-                    <a class="btn btn-primary" type="button" href="#azubiHeading">Auszubildende</a>
-                </div> -->
-                <a class="btn btn-primary mb-2" type="button" href="#tierarztHeading">Tierärzte</a>
-                <a class="btn btn-primary mb-2" type="button" href="#tfaHeading">Tiermedizinische Fachangestellte</a>
-                <a class="btn btn-primary mb-2" type="button" href="#verwaltungHeading">Verwaltung</a>
-                <a class="btn btn-primary mb-2" type="button" href="#raumpflegeHeading">Raumpflege</a>
-                <a class="btn btn-primary mb-2" type="button" href="#azubiHeading">Auszubildende</a>
-            </div>
-            
-        </div>
-        <hr>
-        <div id="tierarztHeading" class="row py-4">
-            
-            <div class="col text-center">
-                <h1 >Tierärzte</h1>
+            <div class="chip-nav">
+                <a class="chip" href="#tierarztHeading">Tierärzte</a>
+                <a class="chip" href="#tfaHeading">Tiermedizinische Fachangestellte</a>
+                <a class="chip" href="#verwaltungHeading">Verwaltung</a>
+                <a class="chip" href="#raumpflegeHeading">Raumpflege</a>
+                <a class="chip" href="#azubiHeading">Auszubildende</a>
             </div>
         </div>
+
+        <h2 id="tierarztHeading" class="section-title text-center">Tierärzte</h2>
         <!-- Modal -->
         <div class="modal fade" id="vetBig" tabindex="-1" aria-labelledby="image" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -111,7 +75,7 @@
         
         -->
 
-        <div class="row gy-4">
+        <div class="row g-4 justify-content-center">
 
             
             <!--Uftel-->
@@ -119,7 +83,7 @@
                 <div class="card vet-card">
 
                     <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Ulrich Güthle" data-bs-vet-image="images/Uli_1_gross.jpg">
-                        <img width="800" height="885" loading="lazy" src="images/Uli_1.JPG" class="card-img-top" alt="..." > 
+                        <img width="800" height="885" loading="lazy" src="images/Uli_1.JPG" class="card-img-top" alt="Dr. Ulrich Güthle" > 
                     </a>
                   
                     <div class="card-body">
@@ -157,7 +121,7 @@
                 <div class="card vet-card">
 
                     <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Nicolas Vockrodt" data-bs-vet-image="images/Nic_1_2_gross.jpg"> 
-                        <img width="800" height="1076" loading="lazy" src="images/Nic_1_2.JPG" class="card-img-top" alt="..."  > 
+                        <img width="800" height="1076" loading="lazy" src="images/Nic_1_2.JPG" class="card-img-top" alt="Dr. Nicolas Vockrodt"  > 
                     </a>
                   
                     <div class="card-body">
@@ -189,12 +153,12 @@
                     </div>
                 </div>
             </div>
-            <hr>
+            <div class="w-100 d-none d-lg-block"></div>
             <!--Ingrid-->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Ingrid Güthle" data-bs-vet-image="images/Ingrid_1_gross.jpg"> <img width="800" height="691" loading="lazy" src="images/Ingrid_1.JPG" class="card-img-top" alt="..."> </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Ingrid Güthle" data-bs-vet-image="images/Ingrid_1_gross.jpg"> <img width="800" height="691" loading="lazy" src="images/Ingrid_1.JPG" class="card-img-top" alt="Dr. Ingrid Güthle"> </a>
                   
                     <div class="card-body">
                       <h5 class="card-title">Dr. Ingrid Güthle</h5>
@@ -229,7 +193,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Melanie Lastinger" data-bs-vet-image="images/Melanie_1_gross.jpg"> <img width="800" height="653" loading="lazy" src="images/Melanie_1.JPG" class="card-img-top" alt="..."> </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Melanie Lastinger" data-bs-vet-image="images/Melanie_1_gross.jpg"> <img width="800" height="653" loading="lazy" src="images/Melanie_1.JPG" class="card-img-top" alt="Melanie Lastinger"> </a>
                   
                     <div class="card-body">
                       <h5 class="card-title">Melanie Lastinger</h5>
@@ -262,7 +226,7 @@
                 <div class="card vet-card">
 
                     <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Silke Stoklasa" data-bs-vet-image="images/Silke_1_gross.jpg"> 
-                        <img width="800" height="730" loading="lazy" src="images/Silke_1.JPG" class="card-img-top" alt="..."> 
+                        <img width="800" height="730" loading="lazy" src="images/Silke_1.JPG" class="card-img-top" alt="Silke Stoklasa"> 
                     </a>
                   
                     <div class="card-body">
@@ -297,7 +261,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Tina Rebelein" data-bs-vet-image="images/Tina_4_gross.jpg"> <img width="800" height="652" loading="lazy" src="images/Tina_4.JPG" class="card-img-top" alt="..."> </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Dr. Tina Rebelein" data-bs-vet-image="images/Tina_4_gross.jpg"> <img width="800" height="652" loading="lazy" src="images/Tina_4.JPG" class="card-img-top" alt="Dr. Tina Rebelein"> </a>
                   
                     <div class="card-body">
                       <h5 class="card-title">Dr. Tina Rebelein</h5>
@@ -330,7 +294,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Sebastian Schrumpf" data-bs-vet-image="images/Basti_2_gross.jpg"> <img width="800" height="763" loading="lazy" src="images/Basti_2.JPG" class="card-img-top" alt="..."> </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Sebastian Schrumpf" data-bs-vet-image="images/Basti_2_gross.jpg"> <img width="800" height="763" loading="lazy" src="images/Basti_2.JPG" class="card-img-top" alt="Sebastian Schrumpf"> </a>
                   
                     <div class="card-body">
                       <h5 class="card-title">Sebastian Schrumpf</h5>
@@ -363,7 +327,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Susanne Miehling" data-bs-vet-image="images/Susi_gross.jpg"> <img width="800" height="943" loading="lazy" src="images/Susi.jpg" class="card-img-top" alt="..."> </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Susanne Miehling" data-bs-vet-image="images/Susi_gross.jpg"> <img width="800" height="943" loading="lazy" src="images/Susi.jpg" class="card-img-top" alt="Susanne Miehling"> </a>
                   
                     <div class="card-body">
                       <h5 class="card-title">Susanne Miehling</h5>
@@ -397,71 +361,35 @@
 
         </div>
         
-       <hr>
-        
-        <div class="row py-5" id="tfaHeading">
-            <div class="col text-center">
-                <h1>Tiermedizinische Fachangestellte</h1>
-            </div>
-        </div>
+       <h2 id="tfaHeading" class="section-title text-center mt-section">Tiermedizinische Fachangestellte</h2>
 
-        <div class="row">
-            <div class="col-12 px-4">
-                <img width="1600" height="1113" loading="lazy" src="images/TFAs.jpg" class="img-fluid">
-            </div>
-        </div>
+        <figure class="group-photo">
+            <img width="1359" height="800" loading="lazy" src="images/TFAs.jpg" alt="Die Tiermedizinischen Fachangestellten der Praxis">
+        </figure>
 
-        <div class="row pt-3" style="font-size: 10px;">
-            <div class="col text-center">
-                <p>Von Links:</p>
-            </div>
-        </div>
+        <p class="name-list__label">Von Links:</p>
+        <ul class="name-list">
+            <li><b>Milena Lechner</b> Tiermedizinische Fachangestellte</li>
+            <li><b>Kerstin Schmidt</b> Tiermedizinische Fachangestellte</li>
+            <li><b>Julia David</b> Tiermedizinische Fachangestellte</li>
+            <li><b>India Barthel</b> Tiermedizinische Fachangestellte</li>
+            <li><b>Mariella Pfanz</b> Tiermedizinische Fachangestellte</li>
+            <li><b>Annemarie Krüger</b> Tiermedizinische Fachangestellte</li>
+        </ul>
 
-        <div class="row pb-3 justify-content-center" style="font-size: 10px;">
-            <div class="col-md-2 text-center">
-                <p><b>Milena Lechner</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-md-2 text-center">
-                <p><b>Kerstin Schmidt</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-md-2 text-center">
-                <p><b>Julia David</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-md-2 text-center">
-                <p><b>India Barthel</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-md-2 text-center">
-                <p><b>Mariella Pfanz</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            <div class="col-md-2 text-center">
-                <p><b>Annemarie Krüger</b>, Tiermedizinische Fachangestellte</p>
-            </div>
-            
-            
-        </div>
+        <p class="name-list__label">Nicht auf dem Bild:</p>
+        <ul class="name-list">
+            <li><b>Elisabeth Tittel</b> Tiermedizinische Fachangestellte</li>
+            <li><b>Annika Hertlein</b> Tiermedizinische Fachangestellte</li>
+        </ul>
 
-        <div class="row">
-            <div class="col text-center" style="font-size: 10px;">
-                <p>Nicht auf dem Bild:</p>
-                <p><b>Elisabeth Tittel</b>, Tiermedizinische Fachangestellte<br>
-                <b>Annika Hertlein</b>, Tiermedizinische Fachangestellte<br>
-                
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row py-5" id="verwaltungHeading">
-            <div class="col text-center">
-                <h1>Verwaltung</h1>
-            </div>
-        </div>
-        <div class="row">
+        <h2 id="verwaltungHeading" class="section-title text-center mt-section">Verwaltung</h2>
+        <div class="row g-4 justify-content-center">
           <!-- Kathrin card -->
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card vet-card">
 
-                <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Kathrin Bluhm" data-bs-vet-image="images/Kathrin.jpg"> <img src="images/Kathrin.jpg" class="card-img-top" alt="..."> </a>
+                <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Kathrin Bluhm" data-bs-vet-image="images/Kathrin.jpg"> <img src="images/Kathrin.jpg" class="card-img-top" alt="Kathrin Bluhm"> </a>
               
                 <div class="card-body">
                   <h5 class="card-title">Kathrin Bluhm</h5>
@@ -472,19 +400,13 @@
         </div>
         </div>
 
-        <hr>
-
-        <div class="row py-5" id="raumpflegeHeading">
-          <div class="col text-center">
-              <h1>Raumpflege</h1>
-          </div>
-      </div>
-      <div class="row">
+        <h2 id="raumpflegeHeading" class="section-title text-center mt-section">Raumpflege</h2>
+      <div class="row g-4 justify-content-center">
         <!-- Pam card -->
       <div class="col-12 col-md-6 col-lg-4">
           <div class="card vet-card">
 
-              <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Pamela Gareis-Schindhelm" data-bs-vet-image="images/Pam_1_gross.jpg"> <img width="800" height="1095" loading="lazy" src="images/Pam_1.JPG" class="card-img-top" alt="..."> </a>
+              <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Pamela Gareis-Schindhelm" data-bs-vet-image="images/Pam_1_gross.jpg"> <img width="800" height="1095" loading="lazy" src="images/Pam_1.JPG" class="card-img-top" alt="Pamela Gareis-Schindhelm"> </a>
             
               <div class="card-body">
                 <h5 class="card-title">Pamela Gareis-Schindhelm</h5>
@@ -495,20 +417,14 @@
       </div>
       </div>
 
-      <hr>
+      <h2 id="azubiHeading" class="section-title text-center mt-section">Auszubildende</h2>
 
-        <div class="row py-4" id="azubiHeading">
-            <div class="col text-center">
-                <h1>Auszubildende</h1>
-            </div>
-        </div>
-
-        <div class="row gy-4 pb-5">
+        <div class="row g-4 justify-content-center">
             <!--Julia Berg-->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card vet-card">
 
-                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Julia Berg" data-bs-vet-image="images/avatar-default.svg"> <img src="images/avatar-default.svg" class="card-img-top" alt="..."> </a>
+                    <a href="#vetBig" data-bs-toggle="modal" data-bs-vet-name="Julia Berg" data-bs-vet-image="images/avatar-default.svg"> <img src="images/avatar-default.svg" class="card-img-top" alt="Julia Berg"> </a>
 
                     <div class="card-body">
                       <h5 class="card-title">Julia Berger</h5>
@@ -519,13 +435,12 @@
             </div>
         </div>
     </div>
-
+</main>
 
 <!-- Footer -->
-<footer id="my_footer" class="footer mt-auto py-3"></footer>
+<footer id="my_footer" class="site-footer"></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="assets/vet-big-modal_script.js"></script>
 </body>
-
 </html>

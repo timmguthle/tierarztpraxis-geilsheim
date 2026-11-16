@@ -1,63 +1,43 @@
 <!DOCTYPE html>
-<html lang="de" class="h-100">
+<html lang="de">
 <head>
 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#faf8f2">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
-	<link
-	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-	  rel="stylesheet"
-	/>
-
-	<link rel="stylesheet" type="text/css" href="assets/styles2.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles3.css">
 	<link rel="icon" href="images/logo_icon.png">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-	<script> 
-		$(document).ready(function(){
-			$("#my_footer").load("assets/footer.html");
-			// navbar loads after the browser already jumped to #anchor, so scroll again
-			$("#my_navbar").load("assets/navbar.html", function() {
-				const target = location.hash && document.getElementById(location.hash.slice(1));
-				if (target) target.scrollIntoView();
-			});
-			$("#notfall-collapse").load("assets/notfallcard.html");
-		});
-	</script> 
+	<!-- lädt Navigation, Notfallkarte und Footer -->
+	<script src="assets/site.js" defer></script>
 
 	<title>Praxis - Tierarztpraxis Geilsheim</title>
 </head>
-<body class="d-flex flex-column h-100">
+<body>
 
-    <!-- Navigation -->
-    <div id="my_navbar"></div>
-
-	<!-- Notfall card -->
-	<div class="collapse" id="notfall-collapse"></div>
+	<!-- Navigation und Notfall card -->
+	<header class="site-header">
+		<div id="my_navbar"></div>
+		<div class="collapse" id="notfall-collapse"></div>
+	</header>
 
 	<!-- Ihalt Praxis -->
+    <main>
     <section id="praxis">
 	<div class="container">
-		<div class="pageTitle mt-5">
-			<div class="overlay-image" style="background-image: url('images/58.jpg');">
-			</div>
-			<div class="pageTitleText text-center">
-				<h1 class="fw-bolder">Praxis</h1>
-			</div>
+		<div class="page-hero">
+			<div class="overlay-image" style="background-image: url('images/58.jpg');"></div>
+			<h1>Praxis</h1>
 		</div>
 
-		<div class="row pt-5">
-			<div class="col text-center">
-				<h2>Die Praxisräume</h2>
-			</div>
-		</div>
+		<h2 class="section-title text-center mt-section">Die Praxisräume</h2>
 
-		<div class="row py-5 align-items-center">
-			<div class="col-md-8">
+		<div class="row g-4 g-lg-5 align-items-center media-row">
+			<div class="col-lg-8">
 				<!-- erste slideshow -->
-				<div id="praxisslide" class="carousel slide" data-bs-ride="carousel">
+				<div id="praxisslide" class="carousel slide photo-carousel" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#praxisslide" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
 						<button type="button" data-bs-target="#praxisslide" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -71,35 +51,35 @@
 
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div class="overlay-image" style="background-image: url('images/wartezimmer1.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/wartezimmer1.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/Silke\ 6.JPG'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/Silke\ 6.JPG');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/Silke\ 4.JPG'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/Silke\ 4.JPG');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/85.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/85.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/behandlung1.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/behandlung1.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/behandlung2.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/behandlung2.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/op1.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/op1.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/roentgen_pfote.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/roentgen_pfote.jpg');">
 							</div>
 						</div>
 
@@ -115,7 +95,7 @@
 				</div>
 
 			</div>
-			<div class="col-md-4 text-center py-3 fs-6">
+			<div class="col-lg-4">
 				<p>Die Praxis befindet sich seit 1. Oktober 2018 in unserem neuen Praxisgebäude in 	Geilsheim. <br>
 				Hier erwarten wir Sie in ruhiger Atmosphäre in unserer geräumigen Praxis. <br> <br>
 					Parkplätze stehen in ausreichender Menge direkt an der Praxis zur Verfügung.
@@ -123,8 +103,8 @@
 			</div>
 		</div>
 
-		<div class="row py-5 align-items-center">
-			<div class="col-md-4 text-center py-3 fs-6">
+		<div class="row g-4 g-lg-5 align-items-center media-row">
+			<div class="col-lg-4">
 				<p> Wir legen großen Wert auf Diagnostik, hierbei spielen sowohl eine sorgfältige klinische
                 Untersuchung als auch verschiedene <b>Laboruntersuchungen</b> eine große Rolle.<br> Ein ganz wesentlicher Punkt
                     in unserer Praxis stellen auch die bildgebenden Verfahren <b>Röntgen</b> und <b>Ultraschall</b> dar. <br> <br>
@@ -132,8 +112,8 @@
 					und Ihr Tier zu finden. </p>
 
 			</div>
-			<div class="col-md-8">
-				<div id="praxisslide2" class="carousel slide" data-bs-ride="carousel">
+			<div class="col-lg-8">
+				<div id="praxisslide2" class="carousel slide photo-carousel" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#praxisslide2" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
 						<button type="button" data-bs-target="#praxisslide2" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -147,35 +127,35 @@
 
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div class="overlay-image" style="background-image: url('images/eingang.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/eingang.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/gang_annie.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/gang_annie.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/katze_kiste.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/katze_kiste.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/hund.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/hund.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/gang.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/gang.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/empfang.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/empfang.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/praxis_schild.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/praxis_schild.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/hund_verband.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/hund_verband.jpg');">
 							</div>
 						</div>
 					</div>
@@ -191,8 +171,8 @@
 			</div>
 
 		</div>
-		<div class="row py-5 align-items-center">
-			<div class="col-md-7 text-center py-3 fs-6">
+		<div class="row g-4 g-lg-5 align-items-center media-row">
+			<div class="col-lg-7">
                 <p>Die Abrechnung für unsere Leistungen ergibt sich aus der Gebührenordnung für Tierärzte
                     <a href="https://www.bundestieraerztekammer.de/tieraerzte/beruf/got/" class="link_kon" target="_blank">(GOT)</a>,
 				dabei berechnen wir im Normalfall den einfachen Satz. Die Preise entspringen somit einer
@@ -202,9 +182,9 @@
 
 
 			</div>
-			<div class="col-md-5">
+			<div class="col-lg-5">
 				<!-- Dritte Slideshow -->
-				<div id="praxisslide3" class="carousel slide" data-bs-ride="carousel">
+				<div id="praxisslide3" class="carousel slide photo-carousel photo-carousel--portrait" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#praxisslide3" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
 						<button type="button" data-bs-target="#praxisslide3" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -216,27 +196,27 @@
 
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div class="overlay-image" style="background-image: url('images/labor1.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/labor1.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/roentgen_annie.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/roentgen_annie.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/ultra_annie.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/ultra_annie.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/Tina\ 1.JPG'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/Tina\ 1.JPG');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/eingang_hoch.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/eingang_hoch.jpg');">
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="overlay-image" style="background-image: url('images/op_hoch.jpg'); opacity: 1;">
+							<div class="overlay-image" style="background-image: url('images/op_hoch.jpg');">
 							</div>
 						</div>
 					</div>
@@ -254,10 +234,10 @@
 		</div>
 	</div>
 </section>
-
+</main>
 
 <!-- Footer -->
-<footer id="my_footer" class="footer mt-auto py-3"></footer>
+<footer id="my_footer" class="site-footer"></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

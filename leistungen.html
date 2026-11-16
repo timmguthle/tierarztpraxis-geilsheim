@@ -1,88 +1,67 @@
 <!DOCTYPE html>
-<html lang="de" class="h-100">
+<html lang="de">
 <head>
 	<meta charset="utf-8">
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#faf8f2">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 
-	<link
-	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-	  rel="stylesheet"
-	/>
-
-	<link rel="stylesheet" type="text/css" href="assets/styles2.css">
+	<link rel="stylesheet" type="text/css" href="assets/styles3.css">
 	<link rel="icon" href="images/logo_icon.png">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-	<script> 
-		$(document).ready(function(){
-			$("#my_footer").load("assets/footer.html");
-			// navbar loads after the browser already jumped to #anchor, so scroll again
-			$("#my_navbar").load("assets/navbar.html", function() {
-				const target = location.hash && document.getElementById(location.hash.slice(1));
-				if (target) target.scrollIntoView();
-			});
-			$("#notfall-collapse").load("assets/notfallcard.html");
-		});
-	</script> 
+	<!-- lädt Navigation, Notfallkarte und Footer -->
+	<script src="assets/site.js" defer></script>
 
 	<title>Leistungen - Tierarztpraxis Geilsheim</title>
 </head>
-<body class="d-flex flex-column h-100">
+<body>
 
-    <!-- Navigation -->
-    <div id="my_navbar"></div>
-
-	<!-- Notfall card -->
-	<div class="collapse" id="notfall-collapse"></div>
+	<!-- Navigation und Notfall card -->
+	<header class="site-header">
+		<div id="my_navbar"></div>
+		<div class="collapse" id="notfall-collapse"></div>
+	</header>
 
 	<!-- Leistung Teil -->
+	<main>
+	<section id="leistungen">
+	<div class="container">
 
-    <section id="leistungen">
-	<div class="container" style="background-color: #efefef!important;">
-
-		<div id="ktiere" class="pageTitle mt-5">
-			<div class="overlay-image" style="background-image: url('images/nic.jpg');">
-			</div>
-			<div class="pageTitleText text-center">
-				<h1 class="fw-bolder">Leistungen Kleintiere</h1>
-			</div>
+		<div id="ktiere" class="page-hero">
+			<div class="overlay-image" style="background-image: url('images/nic.jpg');"></div>
+			<h1>Leistungen Kleintiere</h1>
 		</div>
 
-		<div class="row text-center kon_head pb-5 lead" style="background-color: #efefef!important;">
-			<p>Durch unser großes Team sind wir in der Lage viele Haustierarten professionell zu behandeln.
+		<div class="narrow text-center section-sm">
+			<p class="lead mb-0">Durch unser großes Team sind wir in der Lage viele Haustierarten professionell zu behandeln.
 				<br>
 			Wir legen großen Wert auf eine persönliche Beziehung und gute Kommunikation zu unseren Kund*innen.
 			</p>
 		</div>
 
-		<div class="row align-items-center pb-3 px-3" style="background-color: #efefef!important">
-			<hr>
-			<div class="col-md-7 px-5">
-				<h2 class="pb-2">Vorsorge</h2>
-				<ul>
+		<div class="row g-4 g-lg-5 align-items-center media-row">
+			<div class="col-md-7">
+				<h2 class="section-title">Vorsorge</h2>
+				<ul class="check-list">
 					<li>Impfungen nach Baukastensystem</li>
 					<li>Parasitenprophylaxe</li>
 					<li>Gesundheitschecks (auch vor und nach Auslandsaufenthalt)</li>
 					<li>Fütterungsberatung</li>
 				</ul>
 			</div>
-			<div class="col-md-5" style="position: relative; height: 20rem;">
-				<div class="overlay-image" style="background-image: url('images/111.jpg'); opacity: 1;">
-			</div>
+			<div class="col-md-5">
+				<img src="images/111.jpg" width="1920" height="1282" class="media-img" alt="" loading="lazy">
 			</div>
 		</div>
 
-		<div class="row align-items-center pb-3 px-3" style="background-color: #efefef!important">
-			<hr>
-			<div class="col-md-5" style="position: relative; height: 25rem;">
-				<div class="overlay-image" style="background-image: url('images/auge.jpg'); opacity: 1;">
+		<div class="row g-4 g-lg-5 align-items-center media-row">
+			<div class="col-md-5 order-md-first order-last">
+				<img src="images/auge.jpg" width="543" height="427" class="media-img" alt="" loading="lazy">
 			</div>
-			</div>
-			<div class="col-md-7 px-5 pt-4">
-				<h2 class="pb-2">Diagnostik</h2>
-				<ul>
+			<div class="col-md-7">
+				<h2 class="section-title">Diagnostik</h2>
+				<ul class="check-list">
 					<li>modernes digitales Röntgen</li>
 					<li>Ultraschalldiagnostik</li>
 					<li>Blut-, Harn, und Kotuntersuchungen im eigenen Labor und mit Partnerlaboren</li>
@@ -92,15 +71,14 @@
 			</div>
 		</div>
 
-		<div class="row align-items-center pb-3 px-3" style="background-color: #efefef!important">
-			<hr>
-			<div class="col-md-7 px-5">
-				<h2 class="pb-2">Behandlung</h2>
-				<ul>
+		<div class="row g-4 g-lg-5 align-items-center media-row">
+			<div class="col-md-7">
+				<h2 class="section-title">Behandlung</h2>
+				<ul class="check-list">
 					<li>Innere Medizin</li>
 					<li>
 						Chirurgie/Elektrochirurgie
-							<ul style="list-style-type: disc;">
+							<ul>
 								<li>Alle gängigen Weichteil-OPs</li>
 								<li>Infos zu unserer Narkose finden Sie
 									<a class="link_kon" href="assets/Narkoseinfo.pdf" target="_blank"> hier</a></li>
@@ -111,47 +89,41 @@
 					<li>Augenheilkunde</li>
 				</ul>
 			</div>
-			<div class="col-md-5" style="position: relative; height: 20rem;">
-				<div class="overlay-image" style="background-image: url('images/zahn.jpg'); opacity: 1;">
-			</div>
+			<div class="col-md-5">
+				<img src="images/zahn.jpg" width="686" height="592" class="media-img" alt="" loading="lazy">
 			</div>
 		</div>
 
-		<div class="row" style="background-color: #efefef!important">
-			<div class="col text-center mx-5 pb-4" >
+		<div class="narrow text-center section-sm pb-0">
+			<div class="callout">
 				<p class="fw-bold">Wir haben bewusst darauf verzichtet jede Leistung im Einzelnen aufzuführen,
 					sind jedoch gerne bereit Fragen zu Therapien oder diagnostischen Verfahren zu beantworten</p>
 			</div>
 		</div>
 
-		<div id="gtiere" class="pageTitle mt-5">
-			<div class="overlay-image" style="background-image: url('images/kuh7.jpg');">
-			</div>
-			<div class="pageTitleText text-center">
-				<h1 class="fw-bolder">Leistungen Großtiere</h1>
-			</div>
+		<div id="gtiere" class="page-hero mt-section">
+			<div class="overlay-image" style="background-image: url('images/kuh7.jpg');"></div>
+			<h1>Leistungen Großtiere</h1>
 		</div>
 
-		<div class="row text-center my-5 px-3 align-items-center">
+		<div class="row g-4 g-lg-5 align-items-center media-row mt-section">
 			<div class="col-md-7">
-				<p style="line-height:1.7">
+				<p>
 					Wir bieten Ihnen das gesamte Spektrum der <b>Rindermedizin</b> einschließlich Operationen
 					(z.B. endoskopische Labmagenoperation, Magen-Darm-Chirurgie, Nabeloperationen, Klauenoperationen,
 					Kaiserschnitt, Kastrationen....).<br>
 					Auch auf Herdenbasis findet eine Bestandsbetreuung statt.
 				</p>
 			</div>
-			<div class="col-md-5" style="position: relative; height: 25rem;">
-				<div class="overlay-image" style="background-image: url('images/kuh_offen.jpg'); opacity: 1;">
-			</div>
+			<div class="col-md-5">
+				<img src="images/kuh_offen.jpg" width="1920" height="1912" class="media-img media-img--square" alt="" loading="lazy">
 			</div>
 		</div>
 
-		<hr>
 		<!-- Labmagen Slidshow -->
-		<div class="row my-5 justify-content-center">
-			<h2 class="text-center pb-2">Labmagenoperation</h2>
-			<div id="carouselLabmagen" class="carousel slide">
+		<div class="narrow mt-section">
+			<h2 class="section-title text-center">Labmagenoperation</h2>
+			<div id="carouselLabmagen" class="carousel slide photo-carousel photo-carousel--contain">
 				<div class="carousel-indicators">
 				  <button type="button" data-bs-target="#carouselLabmagen" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 				  <button type="button" data-bs-target="#carouselLabmagen" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -186,26 +158,22 @@
 				  <span class="visually-hidden">Next</span>
 				</button>
 			  </div>
-
 		</div>
 
-		<div class="row text-center my-5 px-3 align-items-center">
-			<hr>
-			<div class="col-md-5" style="position: relative; height: 25rem;">
-				<div class="overlay-image" style="background-image: url('images/esel.jpg'); opacity: 1;">
+		<div class="row g-4 g-lg-5 align-items-center media-row mt-section">
+			<div class="col-md-5 order-md-first order-last">
+				<img src="images/esel.jpg" width="1920" height="1440" class="media-img" alt="" loading="lazy">
 			</div>
-			</div>
-			<div class="col-md-7 pt-4">
-				<p style="line-height:1.7">
+			<div class="col-md-7">
+				<p>
 				Zusätzlich behandeln wir auch gerne <b>Schafe, Ziegen, Esel und Neuweltkameliden</b>
 				</p>
 			</div>
 		</div>
 
-		<div class="row text-center my-5 px-3 pb-3 align-items-center">
-			<hr>
+		<div class="row g-4 g-lg-5 align-items-center media-row">
 			<div class="col-md-7">
-				<p style="line-height:1.7">
+				<p>
 				Im Bereich der <b>Pferdemedizin</b> bieten wir alle ambulanten Behandlungen, wie z.B.
 				Zahnbehandlungen,
 				mobiles Röntgen,
@@ -214,16 +182,16 @@
 				Bronchoskopie
 				</p>
 			</div>
-			<div class="col-md-5" style="position: relative; height: 30rem;">
-				<div class="overlay-image" style="background-image: url('images/pferd.jpg'); opacity: 1;">
-			</div>
+			<div class="col-md-5">
+				<img src="images/pferd.jpg" width="1603" height="1920" class="media-img media-img--portrait" alt="" loading="lazy">
 			</div>
 		</div>
 	</div>
-</section>
+	</section>
+	</main>
 
 <!-- Footer -->
-<footer id="my_footer" class="footer mt-auto py-3"></footer>
+<footer id="my_footer" class="site-footer"></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
