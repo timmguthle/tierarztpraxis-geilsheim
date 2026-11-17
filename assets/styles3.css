@@ -3,6 +3,15 @@
    Baut auf Bootstrap 5.3 auf. Farben und Abstände stehen als Variablen in :root.
    ========================================================================== */
 
+/* Überschriften-Schrift, liegt lokal in assets/fonts (SIL Open Font License) */
+@font-face {
+	font-family: "Fraunces";
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url("fonts/fraunces-latin-opsz-normal.woff2") format("woff2");
+}
+
 :root {
 	/* Farben aus dem Logo */
 	--brown: #4b3f30;        /* Pferd */
@@ -31,6 +40,7 @@
 	--section: clamp(3rem, 2rem + 4.5vw, 5.5rem);
 
 	--font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-display: "Fraunces", Georgia, "Times New Roman", serif;
 
 	/* Bootstrap */
 	--bs-body-font-family: var(--font-sans);
@@ -74,11 +84,31 @@ img[height] {
 	height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
-	letter-spacing: -0.02em;
+h1, h2, h3, h4, h5, h6,
+.job-card-title {
+	font-family: var(--font-display);
+	font-weight: 600;
+	letter-spacing: -0.015em;
 	line-height: 1.15;
 	text-wrap: balance;
+}
+
+/* kleine Zeilen und Schaltflächen innerhalb von Überschriften bleiben serifenlos */
+.vet-card .card-subtitle,
+.accordion-button {
+	font-family: var(--font-sans);
+}
+
+/* lange deutsche Wörter auf schmalen Bildschirmen sauber trennen */
+@media (max-width: 575.98px) {
+	h1, h2, h3 {
+		-webkit-hyphens: auto;
+		hyphens: auto;
+		-webkit-hyphenate-limit-before: 6;
+		-webkit-hyphenate-limit-after: 6;
+		hyphenate-limit-chars: 14 6 6;
+		overflow-wrap: break-word;
+	}
 }
 
 h1 { font-size: clamp(2.1rem, 1.5rem + 2.6vw, 3.25rem); }
@@ -711,7 +741,7 @@ img.site-brand__logo {
 
 .hero h1 {
 	font-size: clamp(2.5rem, 1.4rem + 5vw, 4.5rem);
-	letter-spacing: -0.035em;
+	letter-spacing: -0.02em;
 	line-height: 1.02;
 	color: #fff;
 	margin-bottom: 1.25rem;
@@ -1013,7 +1043,7 @@ a.quick-info__item:hover .quick-info__value {
 	color: #fff;
 	margin: 0;
 	font-size: clamp(2.2rem, 1.5rem + 3.2vw, 3.75rem);
-	letter-spacing: -0.03em;
+	letter-spacing: -0.02em;
 }
 
 /* Titel ohne Bild */
@@ -1401,9 +1431,6 @@ a.quick-info__item:hover .quick-info__value {
 
 .job-card-title {
 	font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem);
-	font-weight: 700;
-	letter-spacing: -0.02em;
-	line-height: 1.15;
 }
 
 .job-card-subtitle {
