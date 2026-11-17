@@ -46,6 +46,21 @@
 		if (target) target.scrollIntoView({ behavior: 'instant' });
 	});
 
+	// Slideshow-Punkte mitführen. Bootstrap aktualisiert nur Punkte, die innerhalb
+	// der Slideshow stehen; auf der Startseite stehen sie daneben im Titeltext.
+	document.addEventListener('slide.bs.carousel', function (event) {
+		if (!event.target.id) return;
+		document.querySelectorAll('[data-bs-target="#' + event.target.id + '"][data-bs-slide-to]').forEach(function (dot) {
+			const active = Number(dot.getAttribute('data-bs-slide-to')) === event.to;
+			dot.classList.toggle('active', active);
+			if (active) {
+				dot.setAttribute('aria-current', 'true');
+			} else {
+				dot.removeAttribute('aria-current');
+			}
+		});
+	});
+
 	// Schatten unter der Navigation, sobald gescrollt wird
 	const header = document.querySelector('.site-header');
 	if (header) {
