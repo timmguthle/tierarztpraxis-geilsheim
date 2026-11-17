@@ -815,6 +815,63 @@ a.quick-info__item:hover .quick-info__value {
 	transition: color 0.2s;
 }
 
+/* Notdienst-Hinweis als Fußzeile der Kurzinfo */
+.quick-info__notfall {
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem 1rem;
+	padding: 1rem 1.6rem;
+	border-top: 1px solid #ecd3ce;
+	border-radius: 0 0 calc(var(--radius) - 1px) calc(var(--radius) - 1px);
+	background: var(--red-soft);
+	color: var(--ink);
+	text-decoration: none;
+	transition: background-color 0.2s;
+}
+
+.quick-info__notfall:hover {
+	color: var(--ink);
+	background: #f3ddd9;
+}
+
+.quick-info__notfall .icon-tile {
+	background: #fff;
+	color: var(--red);
+}
+
+.quick-info__notfall-text {
+	flex: 1;
+	line-height: 1.45;
+}
+
+.quick-info__notfall strong {
+	color: var(--red);
+	margin-right: 0.25rem;
+}
+
+.quick-info__notfall .arrow-link {
+	color: var(--red);
+	white-space: nowrap;
+}
+
+.quick-info__notfall:hover .arrow-link i {
+	transform: translateX(4px);
+}
+
+@media (max-width: 767.98px) {
+	.quick-info__notfall {
+		flex-wrap: wrap;
+		padding: 1rem 1.25rem;
+	}
+
+	/* Link unter den Text, bündig mit dem Text */
+	.quick-info__notfall .arrow-link {
+		width: 100%;
+		padding-left: 4rem;
+	}
+}
+
 @media (max-width: 991.98px) {
 	.quick-info__card {
 		grid-template-columns: 1fr;
