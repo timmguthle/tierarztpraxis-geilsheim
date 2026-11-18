@@ -1020,6 +1020,58 @@ a.quick-info__item:hover .quick-info__value {
 	box-shadow: none;
 }
 
+/* Karte mit Link oder Hinweis am unteren Rand */
+.info-card--stack {
+	display: flex;
+	flex-direction: column;
+}
+
+.info-card--stack .check-list {
+	margin-bottom: 1rem;
+}
+
+.info-card__foot {
+	margin-top: auto;
+}
+
+.info-card__foot.callout p {
+	margin-bottom: 0.5rem;
+}
+
+.info-card--soft .callout {
+	background: var(--surface);
+}
+
+.info-card--soft .check-list > li::before {
+	background: var(--surface);
+}
+
+/* Mehrere Karten untereinander in einer Spalte, zusammen so hoch wie die Nachbarspalte */
+.card-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.card-stack > .info-card {
+	flex: 1 1 auto;
+	height: auto;
+}
+
+/* Überschrift mit Einleitung über einem Kartenraster */
+.section-head {
+	max-width: 40rem;
+	margin-bottom: 2rem;
+}
+
+.section-head .section-title {
+	margin-bottom: 0.5rem;
+}
+
+.section-head .lead {
+	margin: 0;
+}
+
 /* Hervorgehobener Kasten innerhalb einer Karte */
 .callout {
 	padding: 1.25rem 1.4rem;
@@ -1426,10 +1478,11 @@ a.quick-info__item:hover .quick-info__value {
 	box-shadow: var(--shadow-md);
 }
 
+/* Kleine Bildschirme: immer eine Spalte. Große Bildschirme: immer eine
+   Zeile, damit die Namen den Personen auf dem Bild entsprechen. */
 .name-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr;
 	gap: 0.5rem;
 	list-style: none;
 	padding: 0;
@@ -1450,6 +1503,23 @@ a.quick-info__item:hover .quick-info__value {
 .name-list b {
 	display: block;
 	color: var(--ink);
+}
+
+@media (min-width: 992px) {
+	.name-list {
+		grid-template-columns: none;
+		grid-auto-flow: column;
+		/* Spaltenbreite wie bei sechs Personen, damit kürzere Listen gleich
+		   breite Karten bekommen und zentriert stehen. */
+		grid-auto-columns: calc((100% - 5 * 0.5rem) / 6);
+		justify-content: center;
+	}
+
+	.name-list li {
+		padding: 0.5rem 0.5rem;
+		hyphens: auto;
+		overflow-wrap: break-word;
+	}
 }
 
 .name-list__label {
